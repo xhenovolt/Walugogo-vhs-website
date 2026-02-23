@@ -1,14 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { DollarSign, Building2, BookOpen, Heart, Briefcase, CheckCircle2, ArrowRight } from "lucide-react";
+import { DollarSign, Building2, BookOpen, Heart, Briefcase, CheckCircle2, ArrowRight, Copy, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdmissionForm from "@/components/AdmissionForm";
-import { useLanguage } from "@/i18n/LanguageContext";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function AdmissionsPage() {
-const { t } = useLanguage();
+const [copiedAccount, setCopiedAccount] = useState(false);
 
 const containerVariants = {
 hidden: { opacity: 0 },
@@ -25,6 +25,66 @@ const itemVariants = {
 hidden: { opacity: 0, y: 20 },
 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
+
+const copyToClipboard = () => {
+navigator.clipboard.writeText("95060200000801");
+setCopiedAccount(true);
+setTimeout(() => setCopiedAccount(false), 2000);
+};
+
+const feeStructure = [
+{
+icon: <DollarSign className="w-8 h-8" />,
+title: "Day Students",
+amount: "220,000 UGX",
+period: "per term",
+description: "Commuting students attending day classes",
+color: "from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30",
+borderColor: "border-blue-400 dark:border-blue-600",
+},
+{
+icon: <Briefcase className="w-8 h-8" />,
+title: "Boarding Students",
+amount: "420,000 UGX",
+period: "per term",
+description: "Residential students with accommodation",
+color: "from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-800/30",
+borderColor: "border-emerald-400 dark:border-emerald-600",
+badge: "POPULAR",
+},
+{
+icon: <BookOpen className="w-8 h-8" />,
+title: "Vocational Skilling",
+amount: "20,000 UGX",
+period: "separate",
+description: "Specialized vocational training fee",
+color: "from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30",
+borderColor: "border-purple-400 dark:border-purple-600",
+},
+];
+
+const requirements = [
+{
+category: "Stationery",
+icon: <BookOpen className="w-6 h-6" />,
+items: [
+"15 Black Books (A4)",
+"2 Reams of paper",
+"Writing materials (pens, pencils)",
+"Rulers and geometry set",
+],
+},
+{
+category: "Personal Hygiene",
+icon: <Heart className="w-6 h-6" />,
+items: ["JIK or Bleach", "Laundry soap", "Bath soap and towels", "Toothbrush and toothpaste"],
+},
+{
+category: "Administrative",
+icon: <CheckCircle2 className="w-6 h-6" />,
+items: ["Registration fee", "Computer lab fee", "ID or Birth Certificate photocopy", "Recent passport photo"],
+},
+];
 
 return (
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
@@ -48,18 +108,15 @@ className="text-center"
 <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold text-white mb-6">
 Admissions & Fees
 </motion.h1>
-<motion.p
-variants={itemVariants}
-className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto"
->
-Clear, transparent pricing and comprehensive admission requirements
+<motion.p variants={itemVariants} className="text-xl text-blue-100 max-w-2xl mx-auto">
+Transparent pricing and simple admission process. Start your vocational journey with us today.
 </motion.p>
 </motion.div>
 </div>
 </section>
 
 {/* Fee Structure Section */}
-<section className="py-20 md:py-32 bg-white dark:bg-slate-800">
+<section className="py-16 md:py-24 bg-white dark:bg-slate-800">
 <div className="max-w-7xl mx-auto px-4 sm:px-6">
 <motion.div
 initial="hidden"
@@ -68,161 +125,48 @@ viewport={{ once: true, amount: 0.3 }}
 variants={containerVariants}
 className="text-center mb-16"
 >
-<motion.span
-variants={itemVariants}
-className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-4"
->
-Financial Information
-</motion.span>
-<motion.h2
-variants={itemVariants}
-className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-6"
->
-2025 Fee Structure
-</motion.h2>
-<motion.p
-variants={itemVariants}
-className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
->
-Affordable, transparent pricing for quality vocational and academic education
-</motion.p>
+<h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+Fee Structure
+</h2>
+<p className="text-lg text-slate-600 dark:text-slate-400">
+Clear and affordable pricing for all students. Additional uniform cost: 80,000 UGX (one-time)
+</p>
 </motion.div>
 
-{/* Fee Cards Grid */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+{feeStructure.map((fee, index) => (
 <motion.div
+key={index}
 initial="hidden"
 whileInView="visible"
-viewport={{ once: true, amount: 0.3 }}
-variants={containerVariants}
-className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
->
-{/* Day Students */}
-<motion.div
+viewport={{ once: true }}
 variants={itemVariants}
-className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl p-8 shadow-lg border-2 border-blue-300 dark:border-blue-700"
+whileHover={{ y: -10 }}
+className={`relative bg-gradient-to-br ${fee.color} border-2 ${fee.borderColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all`}
 >
-<div className="flex items-center gap-3 mb-4">
-<div className="w-12 h-12 rounded-lg bg-blue-600 text-white flex items-center justify-center">
-<Briefcase className="w-6 h-6" />
+{fee.badge && (
+<div className="absolute top-4 right-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+{fee.badge}
 </div>
-<h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">Day Students</h3>
+)}
+<div className="w-12 h-12 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center mb-4 text-blue-600 dark:text-blue-400">
+{fee.icon}
 </div>
-<p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-220,000 UGX
-</p>
-<p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Per Term</p>
-<ul className="space-y-3 text-slate-700 dark:text-slate-300">
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Tuition included
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Mainstream subjects
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-School facilities
-</li>
-</ul>
-</motion.div>
-
-{/* Boarding Students */}
-<motion.div
-variants={itemVariants}
-className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 shadow-lg border-2 border-slate-300 dark:border-slate-600 relative overflow-hidden"
->
-<div className="absolute top-4 right-4 px-3 py-1 bg-amber-500 text-white text-xs font-bold rounded-full">
-POPULAR
-</div>
-<div className="flex items-center gap-3 mb-4">
-<div className="w-12 h-12 rounded-lg bg-slate-700 text-white flex items-center justify-center">
-<Briefcase className="w-6 h-6" />
-</div>
-<h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">Boarding Students</h3>
-</div>
-<p className="text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
-420,000 UGX
-</p>
-<p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Per Term</p>
-<ul className="space-y-3 text-slate-700 dark:text-slate-300">
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Tuition included
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Accommodation
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Meals included
-</li>
-</ul>
-</motion.div>
-
-{/* Vocational Skilling */}
-<motion.div
-variants={itemVariants}
-className="bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900/20 dark:to-orange-800/20 rounded-2xl p-8 shadow-lg border-2 border-amber-300 dark:border-amber-700"
->
-<div className="flex items-center gap-3 mb-4">
-<div className="w-12 h-12 rounded-lg bg-amber-600 text-white flex items-center justify-center">
-<Briefcase className="w-6 h-6" />
-</div>
-<h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
-Vocational Skilling
-</h3>
-</div>
-<p className="text-4xl font-bold text-amber-600 dark:text-amber-400 mb-4">
-20,000 UGX
-</p>
-<p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Separate Fee</p>
-<ul className="space-y-3 text-slate-700 dark:text-slate-300">
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Hands-on training
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Equipment use
-</li>
-<li className="flex items-center gap-2">
-<CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-Employment skills
-</li>
-</ul>
-</motion.div>
-</motion.div>
-
-{/* Uniform Info */}
-<motion.div
-initial="hidden"
-whileInView="visible"
-viewport={{ once: true, amount: 0.3 }}
-variants={containerVariants}
-className="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-800 dark:to-slate-900 rounded-2xl p-8 md:p-12 shadow-xl mb-16"
->
-<motion.div
-variants={itemVariants}
-className="flex flex-col md:flex-row items-center gap-8"
->
-<div className="flex-shrink-0">
-<div className="flex items-center justify-center w-20 h-20 rounded-full bg-white/20">
-<CheckCircle2 className="w-10 h-10 text-white" />
-</div>
-</div>
-<div className="flex-1">
-<h3 className="text-2xl font-bold text-white mb-2">School Uniform</h3>
-<p className="text-blue-100 mb-4">
-Cream shirt with Navy Blue trouser/skirt combo - identifies students as proud members of the Walugogo family
-</p>
-<div className="text-3xl font-bold text-white">80,000 UGX (One-time)</div>
+<h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{fee.title}</h3>
+<p className="text-slate-600 dark:text-slate-400 mb-4 min-h-[60px]">{fee.description}</p>
+<div className="border-t border-slate-300 dark:border-slate-600 pt-4">
+<p className="text-3xl font-bold text-slate-900 dark:text-white">{fee.amount}</p>
+<p className="text-sm text-slate-500 dark:text-slate-400">{fee.period}</p>
 </div>
 </motion.div>
-</motion.div>
+))}
+</div>
+</div>
+</section>
 
 {/* Banking Section */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-900/20 dark:to-slate-900">
+<div className="max-w-7xl mx-auto px-4 sm:px-6">
 <motion.div
 initial="hidden"
 whileInView="visible"
@@ -243,38 +187,47 @@ Easy, secure payment directly to school account
 
 <motion.div
 variants={itemVariants}
-className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-blue-900 dark:to-slate-950 rounded-2xl p-8 md:p-12 text-white shadow-xl"
+className="max-w-2xl mx-auto bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border-2 border-blue-200 dark:border-blue-700"
 >
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="space-y-6">
 <div>
 <p className="text-sm opacity-75 mb-2">Bank Name</p>
-<p className="text-2xl font-bold mb-6">Bank of Baroda</p>
-
-<p className="text-sm opacity-75 mb-2">Branch</p>
-<p className="text-2xl font-bold mb-6">Iganga Branch</p>
-
-<p className="text-sm opacity-75 mb-2">Account Name</p>
-<p className="text-2xl font-bold">
-Walugogo Vocational High School
-</p>
+<p className="text-2xl font-bold">Bank of Baroda</p>
 </div>
 
-<div className="bg-white/10 rounded-xl p-6 backdrop-blur">
-<p className="text-sm opacity-75 mb-4">Account Number</p>
-<p className="text-3xl font-bold font-mono mb-4 break-all">
-95060200000801
-</p>
-<button
-onClick={() => {
-navigator.clipboard.writeText("95060200000801");
-}}
-className="w-full px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition"
+<div>
+<p className="text-sm opacity-75 mb-2">Branch</p>
+<p className="text-2xl font-bold">Iganga Branch</p>
+</div>
+
+<div>
+<p className="text-sm opacity-75 mb-2">Account Name</p>
+<p className="text-2xl font-bold">Walugogo Vocational High School</p>
+</div>
+
+<div>
+<p className="text-sm opacity-75 mb-2">Account Number</p>
+<div className="flex items-center gap-3">
+<p className="text-3xl font-bold font-mono">95060200000801</p>
+<motion.button
+whileHover={{ scale: 1.05 }}
+whileTap={{ scale: 0.95 }}
+onClick={copyToClipboard}
+className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
 >
-Copy Account Number
-</button>
-<p className="text-xs opacity-60 mt-4">
-Copy this account number to your phone when making payments
-</p>
+{copiedAccount ? (
+<>
+<Check className="w-4 h-4" />
+Copied
+</>
+) : (
+<>
+<Copy className="w-4 h-4" />
+Copy
+</>
+)}
+</motion.button>
+</div>
 </div>
 </div>
 </motion.div>
@@ -282,8 +235,8 @@ Copy this account number to your phone when making payments
 </div>
 </section>
 
-{/* Admission Requirements Section */}
-<section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-slate-50 dark:from-slate-800 dark:to-slate-900">
+{/* Requirements Section */}
+<section className="py-16 md:py-24 bg-white dark:bg-slate-800">
 <div className="max-w-7xl mx-auto px-4 sm:px-6">
 <motion.div
 initial="hidden"
@@ -292,144 +245,68 @@ viewport={{ once: true, amount: 0.3 }}
 variants={containerVariants}
 className="text-center mb-16"
 >
-<motion.span
-variants={itemVariants}
-className="inline-block px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-semibold mb-4"
->
-Requirements
-</motion.span>
-<motion.h2
-variants={itemVariants}
-className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-6"
->
+<h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
 Admission Requirements
-</motion.h2>
-<motion.p
-variants={itemVariants}
-className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
->
-Organized by category for clarity and convenience
-</motion.p>
+</h2>
+<p className="text-lg text-slate-600 dark:text-slate-400">
+Everything your student needs to bring on their first day
+</p>
 </motion.div>
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-{/* Stationery */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+{requirements.map((req, index) => (
 <motion.div
+key={index}
 initial="hidden"
 whileInView="visible"
-viewport={{ once: true, amount: 0.3 }}
-variants={containerVariants}
->
-<motion.div
+viewport={{ once: true }}
 variants={itemVariants}
-className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border-l-4 border-blue-600 dark:border-blue-400"
+className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-700 dark:to-slate-800 rounded-2xl p-8 shadow-lg"
 >
 <div className="flex items-center gap-3 mb-6">
-<div className="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-<BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+<div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+{req.icon}
 </div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
-Stationery
-</h3>
+<h3 className="text-xl font-bold text-slate-900 dark:text-white">{req.category}</h3>
 </div>
 <ul className="space-y-3">
-{[
-"15 Black Books",
-"Rotaatrim Reams",
-"Writing materials and pens",
-].map((item, idx) => (
-<li
-key={idx}
-className="flex items-start gap-3 text-slate-600 dark:text-slate-400"
->
-<ArrowRight className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
-<span>{item}</span>
+{req.items.map((item, idx) => (
+<li key={idx} className="flex items-start gap-3">
+<CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+<span className="text-slate-700 dark:text-slate-300">{item}</span>
 </li>
 ))}
 </ul>
 </motion.div>
-</motion.div>
-
-{/* Personal Hygiene */}
-<motion.div
-initial="hidden"
-whileInView="visible"
-viewport={{ once: true, amount: 0.3 }}
-variants={containerVariants}
->
-<motion.div
-variants={itemVariants}
-className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border-l-4 border-emerald-600 dark:border-emerald-400"
->
-<div className="flex items-center gap-3 mb-6">
-<div className="w-12 h-12 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-<Heart className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-</div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
-Personal Hygiene
-</h3>
-</div>
-<ul className="space-y-3">
-{[
-"JIK (Bleach)",
-"Soap",
-"Towels",
-"Toothbrush and toothpaste",
-].map((item, idx) => (
-<li
-key={idx}
-className="flex items-start gap-3 text-slate-600 dark:text-slate-400"
->
-<ArrowRight className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-1" />
-<span>{item}</span>
-</li>
 ))}
-</ul>
-</motion.div>
-</motion.div>
+</div>
 
-{/* Administrative */}
-<motion.div
-initial="hidden"
-whileInView="visible"
-viewport={{ once: true, amount: 0.3 }}
-variants={containerVariants}
->
-<motion.div
-variants={itemVariants}
-className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border-l-4 border-amber-600 dark:border-amber-400"
->
-<div className="flex items-center gap-3 mb-6">
-<div className="w-12 h-12 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-<DollarSign className="w-6 h-6 text-amber-600 dark:text-amber-400" />
-</div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
-Administrative
-</h3>
-</div>
-<ul className="space-y-3">
-{[
-"Computer Fees (included)",
-"Registration documents",
-"ID/Birth Certificate copy",
-].map((item, idx) => (
-<li
-key={idx}
-className="flex items-start gap-3 text-slate-600 dark:text-slate-400"
->
-<ArrowRight className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-1" />
-<span>{item}</span>
-</li>
-))}
-</ul>
-</motion.div>
-</motion.div>
-</div>
+{/* Image Placeholder */}
+<ImagePlaceholder width={800} height={400} className="mb-12" />
 </div>
 </section>
 
-{/* Admission Form Section */}
+{/* Application Form Section */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-900/20 dark:to-slate-900">
+<div className="max-w-7xl mx-auto px-4 sm:px-6">
+<motion.div
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, amount: 0.3 }}
+variants={containerVariants}
+className="text-center mb-12"
+>
+<h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+Ready to Apply?
+</h2>
+<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+Fill out the form below and join hundreds of students who have transformed their futures at Walugogo VHS
+</p>
+</motion.div>
+
 <AdmissionForm />
+</div>
+</section>
 
 <Footer />
 </main>

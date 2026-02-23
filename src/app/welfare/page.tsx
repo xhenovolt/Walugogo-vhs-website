@@ -166,7 +166,7 @@ export default function WelfarePage() {
           >
             <Image
               src="/Alhanan/Alhanan compound.jpeg"
-              alt="Al Hanan Education Centre compound with safe, conducive learning environment"
+              alt="Walugogo Vocational High School compound with safe, conducive learning environment"
               fill
               className="object-cover"
               sizes="100vw"

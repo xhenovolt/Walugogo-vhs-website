@@ -86,7 +86,7 @@ t("testimonials.zainab.text")
 
 ### About Page (`about`)
 ```
-t("about.pageTitle")          // About Al Hanan Education Centre
+t("about.pageTitle")          // About Walugogo Vocational High School
 t("about.pageDescription")    // Learn about our mission...
 t("about.sectionTitle")       // About Al Hanan
 t("about.missionTitle")       // Our Mission

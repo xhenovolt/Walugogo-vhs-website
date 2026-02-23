@@ -7,11 +7,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SuccessPanel from "../components/SuccessPanel";
 import AcademicsSection from "../components/AcademicsSection";
-import { useLanguage } from "../i18n/LanguageContext";
+import ImagePlaceholder from "../components/ImagePlaceholder";
 
 export default function HomePage() {
-const { t } = useLanguage();
-
 const features = [
 {
 icon: <CheckCircle2 className="w-8 h-8" />,
@@ -203,6 +201,21 @@ className="bg-gradient-to-br from-blue-50 to-slate-50 dark:from-slate-700 dark:t
 
 {/* Academics & Vocational Section */}
 <AcademicsSection />
+
+{/* Gallery Placeholder */}
+<section className="py-16 md:py-24 bg-white dark:bg-slate-800">
+<div className="max-w-7xl mx-auto px-4 sm:px-6">
+<div className="text-center mb-12">
+<h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+Campus Life
+</h2>
+<p className="text-xl text-slate-600 dark:text-slate-400">
+Experience the vibrant community and modern facilities at Walugogo VHS
+</p>
+</div>
+<ImagePlaceholder width={800} height={400} className="mx-auto" />
+</div>
+</section>
 
 {/* CTA Section */}
 <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-800 dark:to-slate-900">

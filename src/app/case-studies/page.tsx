@@ -30,7 +30,7 @@ const caseStudies = [
 	},
 	{
 		title: "Institutional Excellence Recognition",
-		institution: "Al Hanan Education Centre",
+		institution: "Walugogo Vocational High School",
 		challenge:
 			"Establishing and scaling a world-class Islamic educational institution in rural Uganda.",
 		approach:
@@ -84,7 +84,7 @@ export default function CaseStudiesPage() {
 						transition={{ delay: 0.3 }}
 						className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto"
 					>
-						At Al Hanan Education Centre, we transform young lives through <b>academic excellence, Islamic values, and holistic development</b>. Explore our success stories to see how we&apos;ve impacted learners, families, and communities.
+						At Walugogo Vocational High School, we transform young lives through <b>academic excellence, Islamic values, and holistic development</b>. Explore our success stories to see how we&apos;ve impacted learners, families, and communities.
 					</motion.p>
 				</section>
 				{/* Featured Case Studies */}

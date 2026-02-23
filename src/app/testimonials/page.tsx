@@ -99,7 +99,7 @@ export default function TestimonialsPage() {
 						Voices of Al Hanan
 					</h1>
 					<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-						Real stories from parents, students, scholars, and educational partners who have experienced the transformative power of Al Hanan Education Centre.
+						Real stories from parents, students, scholars, and educational partners who have experienced the transformative power of Walugogo Vocational High School.
 						</p>
 					</motion.div>
 				</div>

@@ -20,12 +20,12 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: "Al Hanan Education Centre | Premium Muslim School in Uganda",
+  title: "Walugogo Vocational High School | Premium Muslim School in Uganda",
   description:
-    "Al Hanan Education Centre offers premium Islamic education combining Qur'anic memorization (Hifdh) with rigorous academics in Iganga, Uganda. Founded 2019 by Ummul Qura Foundation, registered with Ministry of Education.",
-  keywords: "Islamic school Uganda, Qur'an memorization, Hifdh school, primary education, Muslim school Iganga, Al Hanan Education Centre",
-  authors: [{ name: "Al Hanan Education Centre" }],
-  creator: "Al Hanan Education Centre",
+    "Walugogo Vocational High School offers premium Islamic education combining Qur'anic memorization (Hifdh) with rigorous academics in Iganga, Uganda. Founded 2019 by Ummul Qura Foundation, registered with Ministry of Education.",
+  keywords: "Islamic school Uganda, Qur'an memorization, Hifdh school, primary education, Muslim school Iganga, Walugogo Vocational High School",
+  authors: [{ name: "Walugogo Vocational High School" }],
+  creator: "Walugogo Vocational High School",
   metadataBase: new URL("https://alhanan.ug"),
   alternates: {
     canonical: "https://alhanan.ug",
@@ -36,22 +36,22 @@ export const metadata: Metadata = {
     shortcut: "/AlhananLogo.png",
   },
   openGraph: {
-    title: "Al Hanan Education Centre | Premium Muslim School",
+    title: "Walugogo Vocational High School | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
     type: "website",
     locale: "en_US",
-    siteName: "Al Hanan Education Centre",
+    siteName: "Walugogo Vocational High School",
     url: "https://alhanan.ug",
     images: {
       url: "/AlhananLogo.png",
       width: 1200,
       height: 800,
-      alt: "Al Hanan Education Centre Logo",
+      alt: "Walugogo Vocational High School Logo",
     },
   },
   twitter: {
     card: "summary_large_image",
-    title: "Al Hanan Education Centre | Premium Muslim School",
+    title: "Walugogo Vocational High School | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
     images: "/AlhananLogo.png",
   },

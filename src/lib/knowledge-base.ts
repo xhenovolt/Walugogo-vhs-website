@@ -1,12 +1,12 @@
 /**
- * Al Hanan Education Centre Knowledge Base
+ * Walugogo Vocational High School Knowledge Base
  * This is the single source of truth for all school information.
  * The AI assistant ONLY uses this data to answer questions.
  */
 
 export const alHananKnowledgeBase = {
   school: {
-    name: "Al Hanan Education Centre",
+    name: "Walugogo Vocational High School",
     tagline: "Shaping Minds, Nurturing Faith, Building the Future",
     description: "A premium Muslim school dedicated to academic excellence and Qur'anic mastery in an Islamic environment.",
     foundedYear: 2019,
@@ -175,12 +175,12 @@ export const alHananKnowledgeBase = {
 
   faqs: [
     {
-      question: "What is Al Hanan Education Centre?",
+      question: "What is Walugogo Vocational High School?",
       answer: "Al Hanan is a premium Muslim school founded in 2019, registered with the Ministry of Education and Sports in Uganda. We combine rigorous academics with comprehensive Qur'anic memorization, shaping disciplined leaders with unshakeable Islamic faith."
     },
     {
       question: "Where is Al Hanan located?",
-      answer: "Al Hanan Education Centre is located along Bulubandi–Kiboyo Road in Bulubandi, Nakigo, Iganga District, Uganda. Our coordinates are 0°35'21.4\"N 33°30'03.6\"E."
+      answer: "Walugogo Vocational High School is located along Bulubandi–Kiboyo Road in Bulubandi, Nakigo, Iganga District, Uganda. Our coordinates are 0°35'21.4\"N 33°30'03.6\"E."
     },
     {
       question: "Is the school registered?",

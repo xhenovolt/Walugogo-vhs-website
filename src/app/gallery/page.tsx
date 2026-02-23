@@ -23,25 +23,25 @@ export default function GalleryPage() {
     // Featured/Hero Images
     {
       src: "/Alhanan/Alhanan compound.jpeg",
-      alt: "Al Hanan Education Centre compound with school buildings and mosque dome",
+      alt: "Walugogo Vocational High School compound with school buildings and mosque dome",
       title: "School Compound",
       category: "Facilities"
     },
     {
       src: "/Alhanan/Alhanan Admin block.jpeg",
-      alt: "Al Hanan Education Centre Admin block building showcasing school infrastructure",
+      alt: "Walugogo Vocational High School Admin block building showcasing school infrastructure",
       title: "Administration Block",
       category: "Facilities"
     },
     {
       src: "/Alhanan/Alhanan class bloack Ultra wide.jpeg",
-      alt: "Al Hanan Education Centre Ultra wide classroom block with modern facilities",
+      alt: "Walugogo Vocational High School Ultra wide classroom block with modern facilities",
       title: "Classroom Block",
       category: "Academic Spaces"
     },
     {
       src: "/Alhanan/Alhanan Nursary classes.jpeg",
-      alt: "Al Hanan Education Centre Nursery classroom facilities for early childhood education",
+      alt: "Walugogo Vocational High School Nursery classroom facilities for early childhood education",
       title: "Nursery Classes",
       category: "Academic Spaces"
     },

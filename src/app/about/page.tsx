@@ -224,7 +224,7 @@ export default function AboutPage() {
 						>
 							<Image
 								src="/Alhanan/CompoundGroundView01.JPG"
-								alt="Al Hanan Education Centre campus overview"
+								alt="Walugogo Vocational High School campus overview"
 								fill
 								className="object-cover group-hover:scale-110 transition-transform duration-500"
 								sizes="(max-width: 768px) 100vw, 33vw"

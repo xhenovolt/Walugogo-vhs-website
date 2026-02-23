@@ -3,15 +3,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sun, Moon, BookOpen } from "lucide-react";
-import { useLanguage } from "../i18n/LanguageContext";
-import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const { t, isRTL } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +20,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -47,20 +43,35 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { name: t("nav.home"), href: "/" },
-    { name: t("nav.about"), href: "/about" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     {
-      name: t("nav.academics"),
+      name: "Programs",
       href: "/academics",
       dropdown: [
-        { name: t("nav.mainstreams"), href: "/academics#mainstream" },
-        { name: t("nav.vocational"), href: "/academics#vocational" },
-        { name: t("nav.schoolLife"), href: "/school-life" }
+        { name: "Mainstream Subjects", href: "/academics#mainstream" },
+        { name: "Vocational Skilling", href: "/academics#vocational" },
       ]
     },
-    { name: t("nav.admissions"), href: "/admissions" },
-    { name: t("nav.contact"), href: "/contact" },
-    { name: t("nav.location"), href: "/location" }
+    {
+      name: "Student Life",
+      href: "/school-life",
+      dropdown: [
+        { name: "School Life", href: "/school-life" },
+        { name: "Gallery", href: "/gallery" },
+        { name: "Testimonials", href: "/testimonials" }
+      ]
+    },
+    { name: "Admissions & Fees", href: "/admissions" },
+    {
+      name: "More",
+      href: "#",
+      dropdown: [
+        { name: "Contact", href: "/contact" },
+        { name: "Location", href: "/location" },
+        { name: "FAQ", href: "/faq" },
+      ]
+    }
   ];
 
   return (
@@ -93,13 +104,13 @@ export default function Navbar() {
                   <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                     Walugogo VHS
                   </span>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">Excellence in Vocational Education</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Vocational Education</p>
                 </div>
               </Link>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -135,9 +146,6 @@ export default function Navbar() {
 
             {/* Right side buttons */}
             <div className="flex items-center gap-4">
-              {/* Language Toggle */}
-              <LanguageToggle />
-
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}

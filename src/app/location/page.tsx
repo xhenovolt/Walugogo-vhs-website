@@ -42,7 +42,7 @@ export default function LocationPage() {
                 style={{ border: 0 }}
                 loading="lazy"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8223456789012!2d33.501018635005195!3d0.5892956164654007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177e6789abcdef01%3A0x1234567890abcdef!2sBulubandi%2C%20Nakigo%2C%20Iganga!5e0!3m2!1sen!2sug!4v1234567890"
-                title="Al Hanan Education Centre Location"
+                title="Walugogo Vocational High School Location"
               />
             </motion.div>
 

@@ -17,7 +17,7 @@ export default function Chatbot() {
     welcome:
       language === "ar"
         ? "مرحبًا! 👋 أنا مساعد مركز الحنان التعليمي. أنا هنا للإجابة على أسئلتك حول المدرسة، بما في ذلك حفظ القرآن والدراسات الإسلامية والقبول والمزيد. كيف يمكنني مساعدتك اليوم؟"
-        : "Hello! 👋 I'm the Al Hanan Education Centre AI assistant. I'm here to answer questions about our school - including our Qur'anic memorization program, Islamic studies, academics, admissions, and more. How can I help you today?",
+        : "Hello! 👋 I'm the Walugogo Vocational High School AI assistant. I'm here to answer questions about our school - including our Qur'anic memorization program, Islamic studies, academics, admissions, and more. How can I help you today?",
     processingError:
       language === "ar"
         ? "أواجه صعوبة في معالجة طلبك الآن. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."

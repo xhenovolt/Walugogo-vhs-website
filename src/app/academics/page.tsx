@@ -114,7 +114,7 @@ export default function AcademicsPage() {
           >
             <Image
               src="/Alhanan/Alhanan class bloack Ultra wide.jpeg"
-              alt="Al Hanan Education Centre classroom block showcasing modern academic facilities"
+              alt="Walugogo Vocational High School classroom block showcasing modern academic facilities"
               fill
               className="object-cover"
               sizes="100vw"

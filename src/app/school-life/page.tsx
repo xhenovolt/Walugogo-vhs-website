@@ -75,7 +75,7 @@ export default function SchoolLifePage() {
               <div className="relative h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/Alhanan/Alhanan Nursary classes.jpeg"
-                  alt="Al Hanan Education Centre Nursery classroom facilities for early childhood education"
+                  alt="Walugogo Vocational High School Nursery classroom facilities for early childhood education"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -164,18 +164,18 @@ export default function SchoolLifePage() {
               <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-emerald-100 dark:ring-emerald-900/50 transition-all duration-300 group-hover:shadow-emerald-500/20 group-hover:ring-emerald-200 dark:group-hover:ring-emerald-700/50">
                 <iframe
                   src="https://www.youtube.com/embed/3XWboqG0E3Y"
-                  title="Abdul Swabur delivering a Friday sermon at Al Hanan Education Centre"
+                  title="Abdul Swabur delivering a Friday sermon at Walugogo Vocational High School"
                   className="w-full aspect-video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  aria-label="Video of Abdul Swabur delivering a Friday sermon at Al Hanan Education Centre"
+                  aria-label="Video of Abdul Swabur delivering a Friday sermon at Walugogo Vocational High School"
                 />
               </div>
             </div>
 
             <div className="text-center mt-6">
               <p className="text-lg text-gray-700 dark:text-gray-300 italic bg-white/60 dark:bg-gray-800/60 rounded-xl py-3 px-6 inline-block">
-                "Abdul Swabur delivering a Friday sermon at Al Hanan Education Centre."
+                "Abdul Swabur delivering a Friday sermon at Walugogo Vocational High School."
               </p>
             </div>
           </motion.div>
