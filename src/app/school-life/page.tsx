@@ -68,12 +68,12 @@ export default function SchoolLifePage() {
             className="mb-12"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Nursery Block */}
+              {/* Sports & Recreation Block */}
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <ImagePlaceholder width={500} height={350} className="w-full h-[350px]" />
                 <div className="p-6 bg-white dark:bg-gray-800">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Early Childhood</h2>
-                  <p className="text-gray-600 dark:text-gray-300">Nurturing small learners with care and early development programs</p>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Sports & Recreation</h2>
+                  <p className="text-gray-600 dark:text-gray-300">Complete facilities for athletics, football, volleyball, and team sports development</p>
                 </div>
               </div>
               {/* Classroom Block */}
