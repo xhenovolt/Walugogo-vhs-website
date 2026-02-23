@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     canonical: "https://alhanan.ug",
   },
   icons: {
-    icon: "/AlhananLogo.png",
-    apple: "/AlhananLogo.png",
-    shortcut: "/AlhananLogo.png",
+    icon: "/Walugogologo-Photoroom.png",
+    apple: "/Walugogologo-Photoroom.png",
+    shortcut: "/Walugogologo-Photoroom.png",
   },
   openGraph: {
     title: "Walugogo Vocational High School | Premium Muslim School",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Walugogo Vocational High School",
     url: "https://alhanan.ug",
     images: {
-      url: "/AlhananLogo.png",
+      url: "/Walugogologo-Photoroom.png",
       width: 1200,
       height: 800,
       alt: "Walugogo Vocational High School Logo",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Walugogo Vocational High School | Premium Muslim School",
     description: "Shaping minds, nurturing faith, building the future",
-    images: "/AlhananLogo.png",
+    images: "/Walugogologo-Photoroom.png",
   },
   robots: {
     index: true,
