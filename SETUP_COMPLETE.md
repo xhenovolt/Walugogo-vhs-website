@@ -291,7 +291,7 @@ Styling Layer
 
 ### 1. Start Development Server
 ```bash
-cd /home/xhenvolt/projects/Alhanan-website
+cd /home/xhenvolt/projects/walugogovhs-website
 npm run dev
 ```
 

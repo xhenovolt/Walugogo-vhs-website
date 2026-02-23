@@ -4,7 +4,7 @@
  * The AI assistant ONLY uses this data to answer questions.
  */
 
-export const alHananKnowledgeBase = {
+export const walugogovhsKnowledgeBase = {
   school: {
     name: "Walugogo Vocational High School",
     tagline: "Shaping Minds, Nurturing Faith, Building the Future",
@@ -25,7 +25,7 @@ export const alHananKnowledgeBase = {
     },
     contact: {
       phone: ["+256 707 153 422"],
-      email: "info@alhanan.ug",
+      email: "info@walugogovhs.ug",
       hours: "School Hours: 8:00 AM - 3:30 PM (Monday-Friday)"
     },
     vision: "To be a leading African Muslim school producing well-rounded, disciplined, excellent learners who are rooted in Islamic faith and academic excellence.",
@@ -101,7 +101,7 @@ export const alHananKnowledgeBase = {
     }
   },
 
-  whyAlHanan: {
+  whywalugogovhs: {
     points: [
       {
         title: "Qur'an First Approach",
@@ -145,7 +145,7 @@ export const alHananKnowledgeBase = {
       "Proof of residence",
       "Health clearance"
     ],
-    contactAdmissions: "+256 707 153 422 or info@alhanan.ug",
+    contactAdmissions: "+256 707 153 422 or info@walugogovhs.ug",
     enrollmentDeadline: "Rolling admissions; early application recommended",
     scholarships: "Merit-based scholarships available for exceptional learners. Contact admissions office for details."
   },
@@ -204,7 +204,7 @@ export const alHananKnowledgeBase = {
     },
     {
       question: "How can I apply to Al Hanan?",
-      answer: "Please contact our admissions office at +256 707 153 422 or email info@alhanan.ug. We require assessment in English and Mathematics, birth certificate, and health clearance."
+      answer: "Please contact our admissions office at +256 707 153 422 or email info@walugogovhs.ug. We require assessment in English and Mathematics, birth certificate, and health clearance."
     },
     {
       question: "What are the school hours?",
@@ -227,42 +227,42 @@ export function extractRelevantKnowledge(userQuery: string): string {
   // Location queries
   if (queryLower.includes("location") || queryLower.includes("where") || queryLower.includes("address") || queryLower.includes("coordinates")) {
     relevantSections.push(
-      `Location Information: ${JSON.stringify(alHananKnowledgeBase.school.location, null, 2)}`
+      `Location Information: ${JSON.stringify(walugogovhsKnowledgeBase.school.location, null, 2)}`
     );
   }
 
   // Qur'an queries
   if (queryLower.includes("quran") || queryLower.includes("memoriz") || queryLower.includes("hifdh")) {
     relevantSections.push(
-      `Qur'an Memorization Program: ${JSON.stringify(alHananKnowledgeBase.programs.quranMemorization, null, 2)}`
+      `Qur'an Memorization Program: ${JSON.stringify(walugogovhsKnowledgeBase.programs.quranMemorization, null, 2)}`
     );
   }
 
   // Islamic studies queries
   if (queryLower.includes("islamic") || queryLower.includes("theology") || queryLower.includes("faith")) {
     relevantSections.push(
-      `Islamic Studies Program: ${JSON.stringify(alHananKnowledgeBase.programs.islamicStudies, null, 2)}`
+      `Islamic Studies Program: ${JSON.stringify(walugogovhsKnowledgeBase.programs.islamicStudies, null, 2)}`
     );
   }
 
   // Academic/Primary education queries
   if (queryLower.includes("academic") || queryLower.includes("education") || queryLower.includes("curriculum")) {
     relevantSections.push(
-      `Primary Education Program: ${JSON.stringify(alHananKnowledgeBase.programs.primaryEducation, null, 2)}`
+      `Primary Education Program: ${JSON.stringify(walugogovhsKnowledgeBase.programs.primaryEducation, null, 2)}`
     );
   }
 
   // Admissions queries
   if (queryLower.includes("admission") || queryLower.includes("apply") || queryLower.includes("enrollment")) {
     relevantSections.push(
-      `Admissions Information: ${JSON.stringify(alHananKnowledgeBase.admissions, null, 2)}`
+      `Admissions Information: ${JSON.stringify(walugogovhsKnowledgeBase.admissions, null, 2)}`
     );
   }
 
   // Contact queries
   if (queryLower.includes("contact") || queryLower.includes("phone") || queryLower.includes("email")) {
     relevantSections.push(
-      `Contact Information: ${JSON.stringify(alHananKnowledgeBase.school.contact, null, 2)}`
+      `Contact Information: ${JSON.stringify(walugogovhsKnowledgeBase.school.contact, null, 2)}`
     );
   }
 
@@ -276,28 +276,28 @@ export function extractRelevantKnowledge(userQuery: string): string {
   // Registration/Ministry queries
   if (queryLower.includes("registered") || queryLower.includes("approved") || queryLower.includes("ministry")) {
     relevantSections.push(
-      `Registration Status: ${JSON.stringify(alHananKnowledgeBase.school.registration, null, 2)}`
+      `Registration Status: ${JSON.stringify(walugogovhsKnowledgeBase.school.registration, null, 2)}`
     );
   }
 
   // Why Al Hanan queries
   if (queryLower.includes("why") || queryLower.includes("difference") || queryLower.includes("unique")) {
     relevantSections.push(
-      `Why Al Hanan: ${JSON.stringify(alHananKnowledgeBase.whyAlHanan, null, 2)}`
+      `Why Al Hanan: ${JSON.stringify(walugogovhsKnowledgeBase.whywalugogovhs, null, 2)}`
     );
   }
 
   // School life queries
   if (queryLower.includes("school life") || queryLower.includes("environment") || queryLower.includes("hours")) {
     relevantSections.push(
-      `School Life: ${JSON.stringify(alHananKnowledgeBase.schoolLife, null, 2)}`
+      `School Life: ${JSON.stringify(walugogovhsKnowledgeBase.schoolLife, null, 2)}`
     );
   }
 
   // Always include school overview for context
   if (relevantSections.length === 0) {
     relevantSections.push(
-      `School Overview: ${JSON.stringify(alHananKnowledgeBase.school, null, 2)}`
+      `School Overview: ${JSON.stringify(walugogovhsKnowledgeBase.school, null, 2)}`
     );
   }
 

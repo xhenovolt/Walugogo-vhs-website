@@ -116,7 +116,7 @@ The Al-Hanan website now has **full Arabic translation with RTL layout support**
 
 ### 1. Start Development Server
 ```bash
-cd /home/xhenvolt/projects/Alhanan-website
+cd /home/xhenvolt/projects/walugogovhs-website
 npm run dev
 ```
 

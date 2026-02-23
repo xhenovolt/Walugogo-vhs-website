@@ -1,108 +1,132 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Heart, Zap, Award, TrendingUp, Users, CheckCircle, Target } from "lucide-react";
+import { BookOpen, Heart, Zap, Award, TrendingUp, Users, CheckCircle, Target, ChevronDown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function AcademicsPage() {
-  const [expandedProgram, setExpandedProgram] = useState<string>("lower");
+  const [expandedProgram, setExpandedProgram] = useState<string>("s1");
 
   const progressionLevels = [
     {
-      id: "nursery",
-      level: "Nursery",
-      badge: "Early Years",
-      color: "emerald",
-      outcomes: [
-        "Social and emotional development",
-        "Basic communication skills",
-        "Introduction to numbers and letters",
-        "Motor skill development"
-      ]
-    },
-    {
-      id: "lower",
-      level: "Lower Primary (P1-P3)",
-      badge: "Foundation",
+      id: "s1",
+      level: "Senior 1 (Form 1)",
+      badge: "O-Level Year 1",
       color: "blue",
       outcomes: [
-        "Foundational numeracy and literacy",
-        "English language proficiency",
-        "Critical thinking development",
-        "Collaborative learning skills"
+        "Foundation in advanced sciences and mathematics",
+        "English language and literature proficiency",
+        "Social sciences and cultural awareness",
+        "Introduction to practical vocational skills"
       ]
     },
     {
-      id: "upper",
-      level: "Upper Primary (P4-P6)",
-      badge: "Intermediate",
+      id: "s2",
+      level: "Senior 2 (Form 2)",
+      badge: "O-Level Year 2",
       color: "purple",
       outcomes: [
-        "Advanced mathematics and science",
-        "Research and project skills",
-        "Leadership development",
-        "Technology integration"
+        "Advanced problem-solving and analytical skills",
+        "Specialized subject mastery",
+        "Research and presentation skills",
+        "Leadership and teamwork development"
       ]
     },
     {
-      id: "primary7",
-      level: "Primary Seven",
-      badge: "Transition",
+      id: "s3",
+      level: "Senior 3 (Form 3)",
+      badge: "O-Level Final",
       color: "amber",
       outcomes: [
-        "National examination readiness",
-        "Career guidance and planning",
-        "Advanced academic subjects",
-        "Independent learning skills"
+        "O-Level examination readiness",
+        "Comprehensive subject mastery",
+        "Career pathway exploration",
+        "Advanced critical thinking skills"
+      ]
+    },
+    {
+      id: "s4",
+      level: "Senior 4 (Form 4)",
+      badge: "A-Level Year 1",
+      color: "rose",
+      outcomes: [
+        "Specialized A-Level subject selection",
+        "University preparation foundation",
+        "Advanced research methodology",
+        "Professional skill development"
+      ]
+    },
+    {
+      id: "s5",
+      level: "Senior 5 (Form 5)",
+      badge: "A-Level Year 2",
+      color: "cyan",
+      outcomes: [
+        "In-depth subject specialization",
+        "University application preparation",
+        "Leadership and mentorship roles",
+        "Professional networking opportunities"
+      ]
+    },
+    {
+      id: "s6",
+      level: "Senior 6 (Form 6)",
+      badge: "A-Level Final",
+      color: "green",
+      outcomes: [
+        "A-Level examination excellence",
+        "University admission readiness",
+        "Career launch preparation",
+        "Global citizenship development"
       ]
     }
   ];
 
   const graduationOutcomes = [
-    { icon: <Award className="w-6 h-6" />, text: "Achieves academic excellence and national recognition" },
-    { icon: <TrendingUp className="w-6 h-6" />, text: "Masters practical vocational skills for employment" },
-    { icon: <Users className="w-6 h-6" />, text: "Demonstrates strong character and ethical values" },
-    { icon: <Target className="w-6 h-6" />, text: "Pursues higher education or professional careers" },
-    { icon: <BookOpen className="w-6 h-6" />, text: "Becomes a lifelong learner with critical thinking" },
-    { icon: <Heart className="w-6 h-6" />, text: "Contributes positively to society and community" },
+    { icon: <Award className="w-6 h-6" />, text: "Achieves 100% pass rate with distinction-level results" },
+    { icon: <TrendingUp className="w-6 h-6" />, text: "Gains admission to top universities in Uganda and globally" },
+    { icon: <Users className="w-6 h-6" />, text: "Develops strong character and ethical leadership skills" },
+    { icon: <Target className="w-6 h-6" />, text: "Secures meaningful employment or university placement" },
+    { icon: <BookOpen className="w-6 h-6" />, text: "Masters advanced critical thinking and research skills" },
+    { icon: <Heart className="w-6 h-6" />, text: "Contributes as responsible global leaders and innovators" },
   ];
 
   const academicStandards = [
-    "100% pass rate through personalized attention",
-    "Modern facilities with technology integration",
-    "Small classes ensuring individual support",
-    "Qualified and experienced teaching staff",
-    "Continuous assessment and progress tracking",
-    "Holistic development beyond academics"
+    "100% pass rate through rigorous academic support",
+    "Modern laboratory and computer facilities",
+    "Small class sizes ensuring individual attention",
+    "University-qualified and experienced faculty",
+    "Continuous formative and summative assessment",
+    "Holistic development beyond academic excellence"
   ];
 
   const programs = [
     {
       id: "mainstream",
-      title: "Mainstream Subjects",
-      badge: "Core Curriculum",
-      description: "Comprehensive academic subjects combining theory with practical application",
+      title: "Mainstream Academic Subjects",
+      badge: "Secondary Curriculum",
+      description: "Comprehensive secondary education combining theory with practical application, preparing students for university",
       subjects: [
-        "Mathematics - Numeracy and advanced problem solving",
-        "English - Language, literature, and communication",
-        "Science - Biology, chemistry, physics, and environmental studies",
-        "Social Studies - History, geography, and civic education",
-        "Physical Education - Sport, fitness, and wellness"
+        "Mathematics - Advanced problem solving and calculus",
+        "English Literature & Language - Critical analysis and communication",
+        "Sciences - Biology, Chemistry, Physics with practical laboratory work",
+        "Social Sciences - History, Geography, Economics, and civics",
+        "Additional subjects - Languages, Computing, Business Studies"
       ]
     },
     {
       id: "vocational",
-      title: "Vocational Skilling",
+      title: "Secondary Vocational Skilling",
       badge: "Practical Training",
-      description: "Hands-on technical training preparing students for immediate employment",
+      description: "Hands-on technical training integrated with secondary education, preparing students for skilled trades and entrepreneurship",
       subjects: [
-        "Carpentry and woodwork - Building and furniture design",
-        "Welding and metal fabrication - Construction and manufacturing",
-        "Plumbing and electrical - Essential infrastructure skills",
-        "Agriculture - Sustainable farming and agribusiness",
-        "Digital skills - IT, coding, and computer literacy"
+        "Carpentry and woodwork - Advanced furniture and construction design",
+        "Welding and metal fabrication - Professional manufacturing standards",
+        "Plumbing and electrical - Building systems and installations",
+        "ICT and Digital Skills - Programming, networking, and digital literacy",
+        "Entrepreneurship - Business planning and financial management"
       ]
     }
   ];
@@ -121,10 +145,10 @@ export default function AcademicsPage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              Academics & Vocational Skilling
+              Secondary Academics & Vocational Skilling
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">
-              Combining rigorous academics with practical vocational skills for complete student development
+              Combining rigorous secondary academics with practical vocational skills for university and career readiness
             </p>
           </motion.div>
 
@@ -154,10 +178,10 @@ export default function AcademicsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Academic Progression
+              Secondary Education Progression
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              Structured learning journey from early years through primary seven
+              Structured 6-year journey from Senior 1 through Senior 6 (O-Level and A-Level)
             </p>
           </motion.div>
 
@@ -233,7 +257,7 @@ export default function AcademicsPage() {
               Our Graduation Outcomes
             </h2>
             <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
-              Every student leaves Walugogo VHS with skills, character, and opportunity for success
+              Every graduate leaves Walugogo VHS with university-readiness, practical skills, and character for success
             </p>
           </motion.div>
 
@@ -274,7 +298,7 @@ export default function AcademicsPage() {
               Our Academic Standards
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              Non-negotiable commitment to excellence at every level
+              Non-negotiable commitment to excellence in secondary education
             </p>
           </motion.div>
 
@@ -312,10 +336,10 @@ export default function AcademicsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Our Programs
+              Our Secondary Programs
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              Balanced education combining academics with practical vocational training
+              Balanced secondary education with academics and practical vocational training
             </p>
           </motion.div>
 
@@ -364,6 +388,3 @@ export default function AcademicsPage() {
     </main>
   );
 }
-
-// Import ChevronDown icon that was missing
-import { ChevronDown } from "lucide-react";

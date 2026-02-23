@@ -64,8 +64,8 @@ function initializeGemini() {
 function buildSystemPrompt(knowledgeContext: string, language: "en" | "ar"): string {
   const noInfoMessage =
     language === "ar"
-      ? "لا أملك معلومات عن ذلك. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
-      : "I don't have information about that. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.";
+      ? "لا أملك معلومات عن ذلك. يرجى التواصل مع الحنان على +256 707 153 422 أو info@walugogovhs.ug للمساعدة."
+      : "I don't have information about that. Please contact Al Hanan at +256 707 153 422 or info@walugogovhs.ug for assistance.";
 
   const responseLanguageRule =
     language === "ar"
@@ -91,7 +91,7 @@ COMMUNICATION GUIDELINES:
 - Be warm, welcoming, and professional
 - Focus on Al Hanan's unique value: Qur'anic memorization + academic excellence
 - Provide specific details from the knowledge base
-- Always include contact information (+256 707 153 422 or info@alhanan.ug) when relevant
+- Always include contact information (+256 707 153 422 or info@walugogovhs.ug) when relevant
 - Emphasize the school's Islamic values, discipline, and excellence
 - Maintain a tone that reflects the school's premium, faith-centered nature`;
 }

@@ -1,7 +1,7 @@
 # Project Structure - Arabic Translation Implementation
 
 ```
-Alhanan-website/
+walugogovhs-website/
 ├── src/
 │   ├── i18n/                           # NEW: Internationalization folder
 │   │   ├── LanguageContext.tsx        # NEW: Language context & provider

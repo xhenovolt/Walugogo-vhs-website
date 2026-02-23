@@ -229,7 +229,7 @@ Shows clear learning pathway for all levels:
 
 - Multiple contact methods:
   - Call: +256707153422
-  - Email: info@alhanan.ug
+  - Email: info@walugogovhs.ug
   - Online Form (new)
 
 ---
@@ -276,12 +276,12 @@ Shows clear learning pathway for all levels:
 
 ### 5.2 Image Library
 Current images integrated:
-- Alhanan compound.jpeg
-- Alhanan Admin block.jpeg
-- Alhanan class block Ultra wide.jpeg
-- Alhanan Nursery classes.jpeg
+- walugogovhs compound.jpeg
+- walugogovhs Admin block.jpeg
+- walugogovhs class block Ultra wide.jpeg
+- walugogovhs Nursery classes.jpeg
 
-Plus 80+ additional media assets available in `/public/Alhanan/` directory:
+Plus 80+ additional media assets available in `/public/walugogovhs/` directory:
 - Aerial views (8 variations)
 - Boys Dormitory (3 images)
 - Breaktime activities (9 images)

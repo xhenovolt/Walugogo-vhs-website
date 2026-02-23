@@ -96,8 +96,8 @@ export default function LocationPage() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {t("location.email")}
                     </h3>
-                    <a href="mailto:info@alhanan.ug" className="text-emerald-600 hover:text-emerald-700 font-semibold">
-                      info@alhanan.ug
+                    <a href="mailto:info@walugogovhs.ug" className="text-emerald-600 hover:text-emerald-700 font-semibold">
+                      info@walugogovhs.ug
                     </a>
                   </div>
                 </div>

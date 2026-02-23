@@ -7,48 +7,48 @@ import Footer from "../../components/Footer";
 
 const caseStudies = [
 	{
-		title: "Academic Excellence Journey",
-		student: "Ahmed Hassan - Primary 7 Graduate",
+		title: "O-Level Academic Excellence",
+		student: "Ahmed Hassan - Senior 3 Graduate",
 		challenge:
-			"Balancing Qur'an memorization with rigorous academic demands while developing leadership qualities.",
+			"Balancing rigorous academic demands with vocational skill development while preparing for O-Level examinations.",
 		approach:
-			"Structured curriculum integrating Islamic studies, comprehensive academics, and character development through our 4-level progression system.",
+			"Structured secondary curriculum integrating core academics, practical vocational training, and personal development through our 6-level secondary progression system.",
 		results:
-			"Completed Qur'an memorization, secured 321/400 PLE score with distinction, and developed into confident community leader.",
-		impact: "Admitted to top-tier secondary institution with scholarship"
+			"Scored 319/400 in O-Levels with distinction in sciences, completed welding vocational certification, and developed into confident young professional.",
+		impact: "Secured university admission for A-Levels with vocational employment backup option"
 	},
 	{
-		title: "Holistic Student Transformation",
-		student: "Zainab Nakato - Upper Primary Learner",
+		title: "Student Transformation Through Support",
+		student: "Zainab Nakato - Senior 1 Student",
 		challenge:
-			"Shy, introverted learner struggling with confidence and academic engagement.",
+			"Shy, introverted learner struggling with confidence and academic engagement transitioning to secondary school.",
 		approach:
-			"Our welfare framework emphasizing supervision, discipline, spiritual development, and safe environment created space for growth.",
+			"Our welfare and mentorship framework emphasizing personalized academic support, career guidance, peer mentorship, and inclusive student activities created pathway for growth.",
 		results:
-			"Now a confident class leader, excelling academically with 85% average, and actively participating in school activities and mosque programs.",
-		impact: "Parents report profound transformation in character and confidence"
+			"Now a confident class prefect, excelling academically with 80%+ average, and actively participating in student leadership and career development programs.",
+		impact: "Parents report profound transformation in confidence and academic capability"
 	},
 	{
-		title: "Institutional Excellence Recognition",
+		title: "Secondary School Excellence Recognition",
 		institution: "Walugogo Vocational High School",
 		challenge:
-			"Establishing and scaling a world-class Islamic educational institution in rural Uganda.",
+			"Establishing and scaling a world-class secondary educational institution combining academics with vocational training in rural Uganda.",
 		approach:
-			"Founded 2017 with vision of integrating Qur'anic memorization, academic rigor, Islamic values, and holistic development across all levels (Nursery to P.7).",
+			"Founded with vision of integrating rigorous secondary academics, practical vocational skills, and holistic character development across all levels (S1 to S6).",
 		results:
-			"100% registered with Ministry of Education, 500+ learners served, 319+ average PLE distinction, recognized as model institution by government and scholars.",
-		impact: "Transformed 500+ lives and influenced educational approach across region"
+			"100% registered with Ministry of Education, 300+ secondary students enrolled, 319+ average O-Level distinction, recognized as model secondary institution by government.",
+		impact: "Transformed 300+ secondary lives annually and influenced educational approach across region"
 	},
 	{
-		title: "Family & Community Impact",
+		title: "Family Secondary Education Journey",
 		family: "Hassan Family - Three Children at Walugogo VHS",
 		challenge:
-			"Parents seeking premium Islamic education with strong academic foundation for their children.",
+			"Parents seeking quality secondary education combining academic excellence with practical vocational skills for their children's future.",
 		approach:
-			"Comprehensive enrollment from Primary 3 through Primary 7, leveraging full academic progression and welfare frameworks.",
+			"Comprehensive enrollment from S1 through S6, leveraging full secondary academic progression and career development frameworks with vocational options.",
 		results:
-			"All three children excelling academically and spiritually, demonstrating discipline and Islamic values, becoming role models in community.",
-		impact: "Family now advocates for Walugogo VHS, influencing 10+ other enrollment decisions"
+			"All three children excelling academically with distinction-level results, completing vocational certifications, and demonstrating professional readiness and leadership.",
+		impact: "Family now advocates for Walugogo VHS, influencing 10+ other secondary student enrollments"
 	},
 ];
 

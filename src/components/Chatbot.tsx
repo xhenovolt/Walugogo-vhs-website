@@ -20,11 +20,11 @@ export default function Chatbot() {
         : "Hello! 👋 I'm the Walugogo Vocational High School AI assistant. I'm here to answer questions about our school - including our Qur'anic memorization program, Islamic studies, academics, admissions, and more. How can I help you today?",
     processingError:
       language === "ar"
-        ? "أواجه صعوبة في معالجة طلبك الآن. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
+        ? "أواجه صعوبة في معالجة طلبك الآن. يرجى التواصل مع الحنان على +256 707 153 422 أو info@walugogovhs.ug للمساعدة."
         : "I'm having trouble processing your request right now. Please contact Walugogo VHS at +256 707 153 422 or info@walugogo.ug for assistance.",
     technicalError:
       language === "ar"
-        ? "أواجه مشكلة تقنية حاليًا. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
+        ? "أواجه مشكلة تقنية حاليًا. يرجى التواصل مع الحنان على +256 707 153 422 أو info@walugogovhs.ug للمساعدة."
         : "I'm experiencing a technical issue. Please contact Walugogo VHS at +256 707 153 422 or info@walugogo.ug for assistance.",
     noResponse: language === "ar" ? "لا يوجد رد" : "No response received",
     quickQuestions: language === "ar" ? "أسئلة سريعة:" : "Quick questions:",

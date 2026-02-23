@@ -49,7 +49,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: t("contact.emailUs"),
-      details: "info@alhanan.ug",
+      details: "info@walugogovhs.ug",
       subtitle: t("contact.emailResponse")
     },
     {
