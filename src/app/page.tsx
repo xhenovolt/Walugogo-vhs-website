@@ -13,23 +13,23 @@ export default function HomePage() {
 const features = [
 {
 icon: <CheckCircle2 className="w-8 h-8" />,
-title: "100% Pass Rate",
-description: "Every single student achieves pass-level grades or better—100% quality focus",
+title: "Academic Excellence",
+description: "Exceptional teaching quality with 100% pass rate demonstrates our commitment to rigorous educational standards",
 },
 {
 icon: <Briefcase className="w-8 h-8" />,
-title: "Vocational Skilling",
-description: "Hands-on training in technical disciplines preparing students for immediate employment",
+title: "Vocational Mastery",
+description: "Advanced technical training in welding, carpentry, plumbing, and electronics—ensuring immediate career readiness",
 },
 {
 icon: <Users className="w-8 h-8" />,
-title: "Personal Attention",
-description: "Small classes ensure every student receives individualized support and mentoring",
+title: "Personalized Development",
+description: "Intimate learning environments with dedicated mentorship enable each student to achieve their full potential",
 },
 {
 icon: <Award className="w-8 h-8" />,
-title: "Modern Facilities",
-description: "Contemporary vocational labs and well-equipped classrooms for optimal learning",
+title: "World-Class Infrastructure",
+description: "State-of-the-art facilities and technology create an optimal environment for both theoretical and practical excellence",
 },
 ];
 

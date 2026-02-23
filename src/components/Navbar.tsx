@@ -9,14 +9,25 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -191,26 +202,26 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden fixed top-20 left-0 right-0 z-40 bg-white dark:bg-slate-900 border-b border-blue-100 dark:border-slate-700"
+            className="lg:hidden fixed top-14 left-0 right-0 z-40 bg-white dark:bg-slate-900 border-b border-blue-100 dark:border-slate-700 max-h-[calc(100vh-14rem)] overflow-y-auto"
           >
-            <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
+            <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
                 <div key={item.name}>
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+                    className="block px-4 py-3 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold text-sm rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors"
                   >
                     {item.name}
                   </Link>
                   {item.dropdown && (
-                    <div className="ml-4 space-y-2 mt-2">
+                    <div className="ml-4 space-y-1 mt-1 pb-2">
                       {item.dropdown.map((subitem, idx) => (
                         <Link
                           key={idx}
                           href={subitem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block px-4 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+                          className="block px-4 py-2 text-xs text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-medium rounded"
                         >
                           {subitem.name}
                         </Link>
@@ -219,11 +230,11 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="pt-4">
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="pt-2">
                 <Link
                   href="/admissions"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg text-center hover:shadow-lg transition-all"
+                  className="block w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg text-center text-sm hover:shadow-lg transition-all"
                 >
                   Apply Now
                 </Link>
@@ -235,6 +246,57 @@ export default function Navbar() {
 
       {/* Spacer for fixed nav */}
       <div className="h-20 hidden lg:block" />
+
+      {/* Mobile Header - Always Visible on Small Screens */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className={`lg:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-b-2 border-slate-900 dark:border-slate-100`}
+      >
+        <div className="px-4 py-3 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 flex-1 min-w-0">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
+              <BookOpen className="w-5 h-5 text-white" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <h1 className="text-sm font-bold text-slate-900 dark:text-white leading-tight truncate">
+                WALUGOGO
+              </h1>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-none">Vocational High School</p>
+            </div>
+          </Link>
+
+          <div className="flex items-center gap-2 flex-shrink-0">
+            {/* Theme Toggle */}
+            <motion.button
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </motion.button>
+
+            {/* Menu Toggle */}
+            <motion.button
+              onClick={() => setIsOpen(!isOpen)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            >
+              {isOpen ? (
+                <X className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+              ) : (
+                <Menu className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+              )}
+            </motion.button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Mobile Top Spacing */}
+      <div className="h-14 lg:hidden" />
     </>
   );
 }
