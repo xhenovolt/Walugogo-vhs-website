@@ -21,15 +21,15 @@ export default function Chatbot() {
     processingError:
       language === "ar"
         ? "أواجه صعوبة في معالجة طلبك الآن. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
-        : "I'm having trouble processing your request right now. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.",
+        : "I'm having trouble processing your request right now. Please contact Walugogo VHS at +256 707 153 422 or info@walugogo.ug for assistance.",
     technicalError:
       language === "ar"
         ? "أواجه مشكلة تقنية حاليًا. يرجى التواصل مع الحنان على +256 707 153 422 أو info@alhanan.ug للمساعدة."
-        : "I'm experiencing a technical issue. Please contact Al Hanan at +256 707 153 422 or info@alhanan.ug for assistance.",
+        : "I'm experiencing a technical issue. Please contact Walugogo VHS at +256 707 153 422 or info@walugogo.ug for assistance.",
     noResponse: language === "ar" ? "لا يوجد رد" : "No response received",
     quickQuestions: language === "ar" ? "أسئلة سريعة:" : "Quick questions:",
     placeholder: language === "ar" ? "اكتب سؤالك..." : "Ask a question...",
-    assistantName: language === "ar" ? "مساعد الحنان" : "Al Hanan Assistant",
+    assistantName: language === "ar" ? "مساعد والوجوجو" : "Walugogo VHS Assistant",
     online: language === "ar" ? "متصل" : "Online",
   };
 

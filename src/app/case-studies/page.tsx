@@ -41,14 +41,14 @@ const caseStudies = [
 	},
 	{
 		title: "Family & Community Impact",
-		family: "Hassan Family - Three Children at Al Hanan",
+		family: "Hassan Family - Three Children at Walugogo VHS",
 		challenge:
 			"Parents seeking premium Islamic education with strong academic foundation for their children.",
 		approach:
 			"Comprehensive enrollment from Primary 3 through Primary 7, leveraging full academic progression and welfare frameworks.",
 		results:
 			"All three children excelling academically and spiritually, demonstrating discipline and Islamic values, becoming role models in community.",
-		impact: "Family now advocates for Al Hanan, influencing 10+ other enrollment decisions"
+		impact: "Family now advocates for Walugogo VHS, influencing 10+ other enrollment decisions"
 	},
 ];
 
@@ -73,7 +73,7 @@ export default function CaseStudiesPage() {
 						transition={{ delay: 0.2 }}
 						className="text-lg md:text-xl text-gray-700 dark:text-gray-200"
 					>
-						How Al Hanan Transforms Lives & Communities
+						How Walugogo VHS Transforms Lives & Communities
 					</motion.p>
 				</section>
 				{/* Introduction */}

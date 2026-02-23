@@ -10,7 +10,7 @@ const testimonials = [
 		name: "Fatima Mayanja",
 		role: "Parent of Hafiz Graduate",
 		relationship: "Mother",
-		text: "Seeing my child complete the Qur'an memorization while maintaining excellent academic performance is a dream come true. Al Hanan didn't just teach my son academics—they shaped his character, instilled discipline, and created a hafiz. The holistic approach to education is remarkable. My son is confident, grounded in Islamic values, and prepared for excellence.",
+		text: "Seeing my child complete the Qur'an memorization while maintaining excellent academic performance is a dream come true. Walugogo VHS didn't just teach my son academics—they shaped his character, instilled discipline, and created a hafiz. The holistic approach to education is remarkable. My son is confident, grounded in Islamic values, and prepared for excellence.",
 		rating: 5,
 		achievement: "Son completed Qur'an memorization with 95% academic average",
 		location: "Kampala, Uganda",
@@ -19,16 +19,16 @@ const testimonials = [
 		name: "Sheikh Abdirahman Ali",
 		role: "Islamic Scholar & Community Leader",
 		relationship: "Educational Partner",
-		text: "A school that combines rigorous academic excellence with Qur'anic mastery—this is what African Islamic education should be. Al Hanan exemplifies the integration of faith and learning that our communities desperately need. The leadership, discipline, and spiritual grounding evident in their learners is exceptional.",
+		text: "A school that combines rigorous academic excellence with Qur'anic mastery—this is what African Islamic education should be. Walugogo VHS exemplifies the integration of faith and learning that our communities desperately need. The leadership, discipline, and spiritual grounding evident in their learners is exceptional.",
 		rating: 5,
 		achievement: "Endorsed as model Islamic educational institution",
 		location: "Eastern Uganda Region",
 	},
 	{
 		name: "James Lwanga",
-		role: "Guardian, Al Hanan Learner",
+		role: "Guardian, Walugogo VHS Student",
 		relationship: "Father",
-		text: "The holistic development approach ensures my ward is not just passing exams, but becoming a leader of character. From academic excellence to moral formation, from physical fitness to spiritual growth—every aspect is attended to. Al Hanan doesn't just educate; they transform young people into responsible Islamic leaders.",
+		text: "The holistic development approach ensures my ward is not just passing exams, but becoming a leader of character. From academic excellence to moral formation, from physical fitness to spiritual growth—every aspect is attended to. Walugogo VHS doesn't just educate; they transform young people into responsible Islamic leaders.",
 		rating: 5,
 		achievement: "Ward progressed from P.4 to P.7 with consistent excellence",
 		location: "Jinja, Uganda",
@@ -37,7 +37,7 @@ const testimonials = [
 		name: "Prof. Nakajjugo",
 		role: "Ministry of Education Official",
 		relationship: "Government Partner",
-		text: "Al Hanan exemplifies what registered, innovative schools should look like in Uganda. Their commitment to excellence in both faith and academics, their rigorous discipline frameworks, and their structured welfare system set them apart. They are a model institution that other schools should emulate.",
+		text: "Walugogo VHS exemplifies what registered, innovative schools should look like in Uganda. Their commitment to excellence in both faith and academics, their rigorous discipline frameworks, and their structured welfare system set them apart. They are a model institution that other schools should emulate.",
 		rating: 5,
 		achievement: "Recognized as exemplary registered school",
 		location: "Uganda Ministry of Education",
@@ -45,20 +45,20 @@ const testimonials = [
 	{
 		name: "Ibrahim Musoke",
 		role: "Parent & Business Owner",
-		relationship: "Father of 2 Al Hanan Learners",
-		text: "The values and discipline instilled at Al Hanan will shape my children for life. It's a premium investment in their future. Beyond the academic results—which are outstanding—I'm impressed by how the school develops discipline, respect, Islamic values, and leadership. My children are thriving.",
+		relationship: "Father of 2 Walugogo VHS Students",
+		text: "The values and discipline instilled at Walugogo VHS will shape my children for life. It's a premium investment in their future. Beyond the academic results—which are outstanding—I'm impressed by how the school develops discipline, respect, Islamic values, and leadership. My children are thriving.",
 		rating: 5,
 		achievement: "Both children excelling academically and spiritually",
 		location: "Iganga, Uganda",
 	},
 	{
 		name: "Halima Nakato",
-		role: "Primary Seven Graduate, Al Hanan",
+		role: "Primary Seven Graduate, Walugogo VHS",
 		relationship: "Student",
-		text: "I'm proud to have memorized the Qur'an and excelled in my academics at the same time. Al Hanan gave me the structure, support, and environment to achieve my goals. The teachers care about your development as a whole person, not just grades. This school changed my life and prepared me for secondary education with confidence.",
+		text: "I'm proud to have memorized the Qur'an and excelled in my academics at the same time. Walugogo VHS gave me the structure, support, and environment to achieve my goals. The teachers care about your development as a whole person, not just grades. This school changed my life and prepared me for secondary education with confidence.",
 		rating: 5,
 		achievement: "Completed Qur'an memorization, scored 319+/400 in PLE",
-		location: "Al Hanan, Iganga",
+		location: "Walugogo VHS, Iganga",
 	},
 ];
 
@@ -66,12 +66,12 @@ const testimonials = [
 const featuredStory = {
 	name: "Karim Hassan",
 	role: "Parent & Education Advocate",
-	text: "In a world of ordinary schools, Al Hanan stands out. The teaching staff are among the most proficient in the country. They don't compromise on standards. Every learner receives individual attention, and the Islamic environment is authentic yet welcoming. My child has grown exponentially—academically, spiritually, and socially.",
+	text: "In a world of ordinary schools, Walugogo VHS stands out. The teaching staff are among the most proficient in the country. They don't compromise on standards. Every learner receives individual attention, and the Islamic environment is authentic yet welcoming. My child has grown exponentially—academically, spiritually, and socially.",
 	rating: 5,
 	achievement: "Outstanding institutional quality & results",
 	location: "Soroti, Uganda",
 	satisfaction: "Highly Satisfied",
-	impact: "Family now advocates for Al Hanan in their community"
+	impact: "Family now advocates for Walugogo VHS in their community"
 };
 
 const stats = [
@@ -96,7 +96,7 @@ export default function TestimonialsPage() {
 						className="text-center max-w-4xl mx-auto"
 					>
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-						Voices of Al Hanan
+						Voices of Walugogo VHS
 					</h1>
 					<p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
 						Real stories from parents, students, scholars, and educational partners who have experienced the transformative power of Walugogo Vocational High School.
@@ -124,7 +124,7 @@ export default function TestimonialsPage() {
 						A Transformation Story
 					</h2>
 					<p className="text-xl text-gray-600 dark:text-gray-300">
-						How Al Hanan is changing lives and building future leaders
+					How Walugogo VHS is changing lives and building future leaders
 						</p>
 					</div>
 
@@ -406,7 +406,7 @@ export default function TestimonialsPage() {
 				>
 					<div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 text-center">
 						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-							Ready to Join the Al Hanan Family?
+							Ready to Join Walugogo VHS?
 						</h2>
 						<p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
 							Invest in your child&apos;s future with excellence in academics, discipline, Islamic values, and holistic development. Let&apos;s create together a generation of confident, principled leaders.
