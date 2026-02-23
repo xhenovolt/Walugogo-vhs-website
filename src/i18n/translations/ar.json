@@ -20,191 +20,313 @@
     "moreOptions": "خيارات أخرى",
     "language": "English"
   },
-  "hero": {
-    "tagline": "التميز المهني في شرق أوغندا",
-    "heading": "مرحباً بك في والوجوجو الثانوية المهنية",
-    "description": "اجمع بين البرامج الأكاديمية الصارمة والتدريب المهني العملي. معدل نجاح 100٪. معدل فشل صفر. حيث ينجح كل طالب.",
-    "credibility": "100% معدل النجاح - حيث ينجح كل طالب",
-    "ctaButton": "تقديم الطلب الآن",
-    "ctaSecondary": "اعرف المزيد"
-  },
-  "homepage": {
-    "title": "والوجوجو الثانوية المهنية",
-    "description": "مؤسسة تعليمية رائدة توفر تعليماً عالي الجودة يجمع بين البرامج الأكاديمية والتدريب المهني"
-  },
-  "successPanel": {
-    "title": "نتائج 2025 - معدل نجاح 100٪",
-    "message": "مع فصول صغيرة والاهتمام الشخصي، يتلقى كل طالب الدعم الذي يحتاجه",
-    "totalCandidates": "إجمالي المرشحين",
-    "aGrades": "درجات أ",
-    "bGrades": "درجات ب",
-    "cGrades": "درجات ج",
-    "failures": "الرسوب",
-    "passRate": "معدل النجاح",
-    "qualityFocus": "التركيز على الجودة"
-  },
-  "academics": {
-    "title": "البرامج الأكاديمية والمهنية",
-    "description": "نقدم برامج أكاديمية شاملة تدمج المهارات العملية والنظرية",
-    "mainstreamSubjects": "البرامج الأساسية",
-    "vocationalSkilling": "المهارات المهنية",
-    "math": "الرياضيات",
-    "physics": "الفيزياء",
-    "biology": "الأحياء",
-    "chemistry": "الكيمياء",
-    "english": "اللغة الإنجليزية",
-    "handOnTraining": "التدريب العملي",
-    "industryStandards": "معايير الصناعة",
-    "employmentReady": "الجاهزية للعمل",
-    "fee": "الرسوم: 20,000 UGX"
-  },
-  "admissions": {
-    "title": "القبول والرسوم",
-    "description": "تقديم شفاف للرسوم والمتطلبات",
-    "feeStructure": "هيكل الرسوم",
-    "dayStudents": "الطلاب اليوميين - 220,000 UGX",
-    "boardingStudents": "الطلاب الداخليين - 420,000 UGX",
-    "vocationalSkilling": "المهارات المهنية - 20,000 UGX",
-    "uniformDetails": "الزي الموحد: قميص كريمي وسروال/تنورة زرقاء نيلية - 80,000 UGX",
-    "banking": "معلومات البنك",
-    "bankName": "اسم البنك",
-    "bankOfBaroda": "بنك بارودة",
-    "branch": "الفرع",
-    "igangaBranch": "فرع إيجانجا",
-    "accountName": "اسم الحساب",
-    "accountNameValue": "مدرسة والوجوجو الثانوية المهنية",
-    "accountNumber": "رقم الحساب",
-    "accountNumberValue": "95060200000801",
-    "copy": "نسخ",
-    "requirements": "متطلبات القبول",
-    "stationery": "المستلزمات المكتبية",
-    "personalHygiene": "النظافة الشخصية",
-    "administrative": "المتطلبات الإدارية",
-    "applicationForm": "نموذج التقديم"
-  },
-  "features": {
-    "title": "لماذا والوجوجو؟",
-    "description": "نحن ملتزمون بنجاح 100٪ من الطلاب",
-    "feature1": "معدل نجاح 100٪",
-    "feature1Desc": "كل طالب يحقق درجات على مستوى النجاح أو أفضل",
-    "feature2": "المهارات المهنية",
-    "feature2Desc": "تدريب عملي في التخصصات التقنية يجهز الطلاب للعمل الفوري",
-    "feature3": "الاهتمام الشخصي",
-    "feature3Desc": "فصول صغيرة تضمن حصول كل طالب على الدعم الفردي والتوجيه",
-    "feature4": "المرافق الحديثة",
-    "feature4Desc": "مختبرات مهنية عصرية وفصول دراسية مجهزة بشكل جيد"
-  },
-  "gallery": {
-    "title": "معرض الصور",
-    "description": "رحلات من حياتنا المدرسية",
-    "viewMore": "عرض المزيد"
-  },
-  "testimonials": {
-    "title": "آراء الطلاب والأولياء",
-    "description": "يشاركنا الطلاب وأولياء الأمور تجاربهم الإيجابية",
-    "studentTestimony": "شهادة الطالب",
-    "parentTestimony": "شهادة ولي الأمر"
-  },
-  "schoolLife": {
-    "title": "حياة المدرسة",
-    "description": "اكتشف البيئة الصحية والداعمة التي نوفرها",
-    "welfare": "الرعاية والبيئة",
-    "activities": "الأنشطة المدرسية",
-    "communityService": "خدمة المجتمع"
-  },
-  "contact": {
-    "title": "اتصل بنا",
-    "description": "نحن هنا للإجابة على جميع أسئلتك",
-    "bursar": "الناظر المالي",
-    "bursarPhone": "0772 498 906 / 0700 850 154",
-    "pr": "العلاقات العامة",
-    "prPhone": "0759 755 222",
-    "email": "walugogohighschool@gmail.com",
-    "location": "الموقع",
-    "address": "عقار والوجوجو خلف منتجع نتندا فالي، بلدية إيجانجا، طريق إيجانجا-جنجا السريع",
-    "hours": "ساعات العمل"
-  },
-  "location": {
-    "title": "الموقع والاتصال",
-    "address": "عقار والوجوجو، خلف منتجع نتندا فالي، بلدية إيجانجا، طريق إيجانجا-جنجا السريع",
-    "phone": "الهاتف",
-    "email": "البريد الإلكتروني",
-    "hours": "ساعات العمل",
-    "bursar": "الناظر المالي",
-    "bursarPhone": "0772 498 906 / 0700 850 154",
-    "pr": "العلاقات العامة",
-    "prPhone": "0759 755 222"
-  },
   "common": {
     "language": "اللغة",
     "english": "الإنجليزية",
     "arabic": "العربية",
     "schoolName": "مدرسة والوجوجو الثانوية المهنية",
-    "motto": "التميز في التعليم المهني",
-    "readMore": "اقرأ المزيد",
-    "apply": "تقديم الطلب",
-    "learnMore": "اعرف المزيد",
-    "backToTop": "العودة للأعلى",
-    "menu": "القائمة",
-    "close": "إغلاق",
-    "search": "البحث",
-    "loading": "جاري التحميل...",
-    "error": "حدث خطأ",
-    "success": "تم بنجاح",
-    "submit": "إرسال",
-    "cancel": "إلغاء"
+    "motto": "التميز في التعليم المهني"
+  },
+  "hero": {
+    "tagline": "التميز المهني في شرق أوغندا",
+    "heading": "مرحباً بك في والوجوجو الثانوية المهنية",
+    "description": "اجمع بين البرامج الأكاديمية الصارمة والتدريب المهني العملي",
+    "credibility": "100% معدل النجاح - حيث ينجح كل طالب",
+    "ctaButton": "تقديم الطلب الآن",
+    "ctaSecondary": "اعرف المزيد"
+  },
+  "successPanel": {
+    "title": "100% Quality Pass Rate: Where Every Student is a Priority",
+    "subtitle": "2025 Performance Results",
+    "totalCandidates": "17 Candidates",
+    "grades": {
+      "aCount": "2A's",
+      "bCount": "3B's",
+      "cCount": "12C's",
+      "dCount": "0D's",
+      "eCount": "0E's"
+    },
+    "passRate": "100% Pass Rate",
+    "failureRate": "Zero Failure Rate",
+    "message": "With small classes and personalized attention, every student receives the support they need to succeed. We don't just teach - we invest in transforming lives."
+  },
+  "features": {
+    "vocationalSkilling": {
+      "title": "Vocational Skilling",
+      "description": "Hands-on technical training preparing students for immediate employment opportunities"
+    },
+    "academicExcellence": {
+      "title": "Academic Excellence",
+      "description": "Rigorous mainstream subjects including Mathematics, Physics, Biology, Chemistry, and English"
+    },
+    "modernFacilities": {
+      "title": "Modern Facilities",
+      "description": "Equipped with contemporary vocational labs and modern classroom facilities"
+    },
+    "personalisedAttention": {
+      "title": "Personalised Attention",
+      "description": "Small classes ensure every student receives the support they deserve"
+    }
+  },
+  "academics": {
+    "pageTitle": "Academic Excellence",
+    "pageDescription": "Our comprehensive curriculum combines mainstream academics with practical vocational skills",
+    "sectionTitle": "Our Educational Approach",
+    "heading": "Academics & Vocational Skilling",
+    "description": "Combining rigorous academics with practical vocational skills for complete student development",
+    "mainstreamsTitle": "Mainstream Subjects",
+    "mainstreamsSubtitle": "Rigorous National Curriculum Excellence",
+    "mainstreams": [
+      {
+        "title": "Mathematics",
+        "description": "Advanced mathematical concepts, problem-solving, and critical thinking"
+      },
+      {
+        "title": "Physics",
+        "description": "Experimental science and practical applications"
+      },
+      {
+        "title": "Biology",
+        "description": "Life sciences and biological systems understanding"
+      },
+      {
+        "title": "Chemistry",
+        "description": "Chemical reactions, laboratory techniques, and industrial applications"
+      },
+      {
+        "title": "English Language",
+        "description": "Communication, literature analysis, and professional writing skills"
+      }
+    ],
+    "vocationalTitle": "Vocational Skilling",
+    "vocationalSubtitle": "Practical Technical Training for Employment",
+    "vocationalFee": "Vocational Skilling Fee: 20,000 UGX",
+    "vocationalNote": "Separate from tuition - equips students with immediate employment-ready skills"
+  },
+  "admissions": {
+    "pageTitle": "Admissions & Fees",
+    "pageDescription": "Join Walugogo Vocational High School - Apply now and secure your future",
+    "heading": "Admissions & Fee Information",
+    "description": "Join our Quality Education and Vocational Excellence Community",
+    "feesTitle": "2025 Fee Structure",
+    "feesSubtitle": "Transparent and Comprehensive Pricing",
+    "dayStudents": {
+      "title": "Day Students",
+      "amount": "220,000 UGX",
+      "period": "Per Term"
+    },
+    "boardingStudents": {
+      "title": "Boarding Students",
+      "amount": "420,000 UGX",
+      "period": "Per Term"
+    },
+    "vocationalSkilling": {
+      "title": "Vocational Skilling",
+      "amount": "20,000 UGX",
+      "period": "Separate Fee"
+    },
+    "uniform": {
+      "title": "School Uniform",
+      "description": "Cream shirt with Navy Blue trouser/skirt combo",
+      "amount": "80,000 UGX",
+      "period": "One-time Purchase"
+    },
+    "bankingSection": {
+      "title": "Banking Information",
+      "subtitle": "Easy, Secure Payments",
+      "bankName": "Bank of Baroda",
+      "branch": "Iganga Branch",
+      "accountName": "Walugogo Vocational High School",
+      "accountNumber": "95060200000801",
+      "instruction": "Parents can make payments directly to the school account. We make it simple for banking queues."
+    },
+    "requirementsTitle": "Admission Requirements",
+    "requirementsSubtitle": "Organized by Category for Clarity",
+    "stationery": {
+      "category": "Stationery",
+      "items": [
+        "15 Black Books",
+        "Rotaatrim Reams",
+        "Writing materials and pens"
+      ]
+    },
+    "hygiene": {
+      "category": "Personal Hygiene",
+      "items": [
+        "JIK (Bleach)",
+        "Soap",
+        "Towels",
+        "Toothbrush and toothpaste"
+      ]
+    },
+    "administrative": {
+      "category": "Administrative",
+      "items": [
+        "Computer Fees (included in tuition)",
+        "Registration documents",
+        "ID/Birth Certificate copy"
+      ]
+    },
+    "stepTitle1": "Step 1: Application",
+    "stepDescription1": "Submit your online admission form with required information",
+    "stepTitle2": "Step 2: Assessment",
+    "stepDescription2": "Academic readiness assessment to ensure best placement",
+    "stepTitle3": "Step 3: Interview & Admission",
+    "stepDescription3": "Parent consultation and formal admission confirmation",
+    "onlineForm": {
+      "title": "Online Admission Form",
+      "subtitle": "Complete your application below. We'll contact you within 48 hours.",
+      "learnerSection": "Student Information",
+      "parentSection": "Parent/Guardian Information",
+      "applicationSection": "Application Details",
+      "fullName": "Full Name *",
+      "dateOfBirth": "Date of Birth *",
+      "gender": "Gender *",
+      "formerSchool": "Former School *",
+      "grade": "Grade/Class Applying For *",
+      "parentGuardian": "Parent/Guardian Name *",
+      "relationship": "Relationship to Student *",
+      "phone": "WhatsApp/Phone Number *",
+      "email": "Email Address",
+      "address": "Residential Address *",
+      "district": "District *",
+      "howYouHeard": "How did you hear about us? *",
+      "additionalNotes": "Additional Notes (Optional)",
+      "agreeTerms": "I agree to Walugogo admission terms *",
+      "submitForm": "Submit Application",
+      "submitting": "Submitting...",
+      "successMessage": "Thank you! Your application has been received. We will contact you within 48 hours.",
+      "errorRequired": "Please fill in all required fields",
+      "errorPhone": "Please enter a valid phone number",
+      "errorEmail": "Please enter a valid email address",
+      "formStatus": "Application Status"
+    }
+  },
+  "location": {
+    "heading": "Find Us",
+    "description": "Walugogo Estate, Behind Ntinda Valley Resort, Iganga Municipality. Along the Iganga-Jinja highway.",
+    "schoolLocation": "School Location",
+    "address": "Walugogo Estate, Behind Ntinda Valley Resort",
+    "municipality": "Iganga Municipality, Uganda",
+    "highway": "Along Iganga - Jinja Highway",
+    "phone": "Phone",
+    "email": "Email",
+    "schoolHours": "School Hours",
+    "daysOfWeek": "Monday - Friday",
+    "hours": "8:00 AM - 4:00 PM EAT",
+    "welcomeText": "We welcome visits from parents and prospective families. Please contact us to schedule a campus tour."
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "heading": "Get in Touch",
+    "heroTitle": "Let's Build Your Success Story",
+    "heroDescription": "Have questions about admissions, fees, or our programs? Reach out to us today.",
+    "contactByRole": "Contact by Role",
+    "bursar": {
+      "title": "Bursar (Fees & Finance)",
+      "numbers": [
+        "0772 498 906",
+        "0700 850 154"
+      ]
+    },
+    "publicRelations": {
+      "title": "Public Relations",
+      "number": "0759 755 222"
+    },
+    "schoolEmail": "walugogohighschool@gmail.com",
+    "sendMessage": "Send us a Message",
+    "messageDescription": "We respond within 24 hours",
+    "fullName": "Full Name *",
+    "emailAddress": "Email Address *",
+    "subject": "Subject *",
+    "message": "Message *",
+    "sendButton": "Send",
+    "successMessage": "Message sent successfully! We'll be in touch soon.",
+    "requiredFields": "All fields are required.",
+    "invalidEmail": "Please enter a valid email address."
   },
   "footer": {
-    "quickLinks": "روابط سريعة",
-    "followUs": "تابعنا",
-    "allRightsReserved": "جميع الحقوق محفوظة",
-    "designedBy": "صمم بواسطة",
-    "companyName": "والوجوجو الثانوية المهنية"
+    "about": "About Walugogo VHS",
+    "description": "Success begins with you",
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "resources": "Resources",
+    "legal": "Legal",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "schoolName": "Walugogo Vocational High School",
+    "schoolDescription": "A premier vocational high school dedicated to combining rigorous academics with practical vocational skilling, preparing students for successful careers.",
+    "addressLine1": "Walugogo Estate, Behind Ntinda Valley Resort",
+    "addressLine2": "Iganga Municipality, Uganda",
+    "stayConnected": "Stay Connected",
+    "subscribeDescription": "Subscribe to get updates on admissions, school events, and academic achievements.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 Walugogo Vocational High School. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "homepage": {
+    "ourPrograms": "Our Programs",
+    "programsDescription": "Comprehensive pathways combining academic excellence with vocational skilling for immediate employment readiness.",
+    "ctaHeading": "Ready to Transform Your Future?",
+    "ctaDescription": "Join Walugogo Vocational High School where every student succeeds. 100% pass rate, personalized attention, and employment-ready vocational skills.",
+    "applyButton": "Apply Today",
+    "testimonialHeading": "What Parents Say",
+    "heroImageAlt": "Walugogo Vocational High School students in cream and navy blue uniforms",
+    "passRate": "100% Pass Rate",
+    "students": "17 Students (2025)",
+    "zeroFailure": "Zero Failure Rate",
+    "whyTitle": "Why Walugogo VHS?",
+    "whyDescription": "We're committed to 100% student success through personalized attention, quality academics, and practical vocational training.",
+    "whyFeatures": [
+      {
+        "title": "100% Pass Rate",
+        "description": "Every student achieves pass level grades or better"
+      },
+      {
+        "title": "Vocational Skills",
+        "description": "Hands-on training preparing students for immediate employment"
+      },
+      {
+        "title": "Personal Attention",
+        "description": "Small classes ensure every student gets support they need"
+      },
+      {
+        "title": "Modern Facilities",
+        "description": "Contemporary labs and well-equipped classrooms"
+      }
+    ]
+  },
+  "gallery": {
+    "pageTitle": "Gallery",
+    "heading": "School Gallery",
+    "description": "Explore our modern facilities and vibrant school community"
+  },
+  "testimonials": {
+    "pageTitle": "Testimonials",
+    "heading": "What Our Community Says",
+    "description": "Hear from parents and students about their Walugogo experience"
+  },
+  "schoolLife": {
+    "pageTitle": "School Life",
+    "heading": "Life at Walugogo",
+    "description": "Discover the vibrant, supportive, and disciplined community at Walugogo VHS"
   },
   "faq": {
-    "title": "الأسئلة الشائعة",
-    "description": "إجابات على الأسئلة الشائعة",
-    "question1": "كيف أتقديم في المدرسة؟",
-    "answer1": "يمكنك التقديم من خلال نموذج القبول على الموقع أو التواصل معنا مباشرة",
-    "question2": "ما هي الرسوم الدراسية؟",
-    "answer2": "الرسوم متوفرة على صفحة القبول والتسجيل",
-    "question3": "هل توفرون السكن الداخلي؟",
-    "answer3": "نعم، نوفر برنامج سكن داخلي كامل للطلاب"
+    "pageTitle": "Frequently Asked Questions",
+    "heading": "FAQs",
+    "description": "Find answers to common questions about Walugogo Vocational High School"
   },
   "newsletter": {
-    "title": "النشرة الإخبارية",
-    "description": "اشترك لتلقي آخر الأخبار والتحديثات",
-    "email": "بريدك الإلكتروني",
-    "subscribe": "الاشتراك",
-    "enterEmail": "أدخل بريدك الإلكتروني"
+    "pageTitle": "Newsletter",
+    "heading": "Stay Updated",
+    "description": "Subscribe to get the latest news and updates from Walugogo VHS"
   },
   "privacy": {
-    "title": "سياسة الخصوصية",
-    "description": "معلومات حول كيفية جمعنا واستخدامنا لبيانات العملاء",
-    "content": "نحن نحترم خصوصيتك ونلتزم بحماية بيانتك الشخصية. تشرح هذه السياسة كيفية جمعنا واستخدامنا ونحافظ على معلومات العملاء."
+    "pageTitle": "Privacy Policy"
   },
   "terms": {
-    "title": "شروط الخدمة",
-    "description": "شروط الخدمة التي يخضع لها استخدام موقعنا",
-    "content": "باستخدام موقعنا، فإنك توافق على الامتثال لهذه الشروط والأحكام. يرجى قراءتها بعناية قبل الاستمرار في استخدام الموقع."
-  },
-  "form": {
-    "studentName": "اسم الطالب",
-    "formerSchool": "المدرسة السابقة",
-    "grade": "الصف/الفصل",
-    "parentName": "اسم ولي الأمر",
-    "parentPhone": "هاتف ولي الأمر (WhatsApp)",
-    "parentEmail": "بريد ولي الأمر",
-    "parentAddress": "عنوان ولي الأمر",
-    "district": "المنطقة",
-    "howHeard": "كيف علمت بنا؟",
-    "requiredField": "هذا الحقل مطلوب",
-    "invalidEmail": "بريد إلكتروني غير صحيح",
-    "invalidPhone": "رقم هاتف غير صحيح",
-    "submit": "إرسال الطلب",
-    "submitting": "جاري الإرسال...",
-    "successMessage": "تم استلام طلبك! سنتواصل معك خلال 48 ساعة.",
-    "errorMessage": "حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.",
-    "thankYou": "شكراً لتقديمك!"
+    "pageTitle": "Terms of Service"
   }
 }
