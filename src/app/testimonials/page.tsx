@@ -19,7 +19,7 @@ const testimonials = [
 		name: "Sheikh Abdirahman Ali",
 		role: "Islamic Scholar & Community Leader",
 		relationship: "Educational Partner",
-		text: "A school that combines rigorous academic excellence with practical vocational training—this is what secondary education should be. Walugogo VHS exemplifies the integration of theory and practice that our students desperately need. The teaching quality, discipline, and career preparation evident in their learners is exceptional.",,
+		text: "A school that combines rigorous academic excellence with practical vocational training—this is what secondary education should be. Walugogo VHS exemplifies the integration of theory and practice that our students desperately need. The teaching quality, discipline, and career preparation evident in their learners is exceptional.",
 		rating: 5,
 		achievement: "Endorsed as model Islamic educational institution",
 		location: "Eastern Uganda Region",
@@ -28,7 +28,7 @@ const testimonials = [
 		name: "James Lwanga",
 		role: "Guardian, Walugogo VHS Student",
 		relationship: "Father",
-		text: "The holistic development approach ensures my ward is becoming a well-rounded leader. From academic excellence to character formation, from sports to entrepreneurship—every dimension is attended to. Walugogo VHS doesn't just educate; they transform young people into principled, capable leaders ready for university and careers.",,
+		text: "The holistic development approach ensures my ward is becoming a well-rounded leader. From academic excellence to character formation, from sports to entrepreneurship—every dimension is attended to. Walugogo VHS doesn't just educate; they transform young people into principled, capable leaders ready for university and careers.",
 		rating: 5,
 		achiievement: "Ward progressing excellently from S1 to S3 with top grades in sciences",
 		location: "Jinja, Uganda",
@@ -37,7 +37,7 @@ const testimonials = [
 		name: "Prof. Nakajjugo",
 		role: "Ministry of Education Official",
 		relationship: "Government Partner",
-		text: "Walugogo VHS exemplifies what quality secondary schools should be in Uganda. Their commitment to academic excellence and practical skill development, their disciplined environment, and their university preparation systems set them apart. They are a model institution that other secondary schools should emulate.",,
+		text: "Walugogo VHS exemplifies what quality secondary schools should be in Uganda. Their commitment to academic excellence and practical skill development, their disciplined environment, and their university preparation systems set them apart. They are a model institution that other secondary schools should emulate.",
 		rating: 5,
 		achievement: "Recognized as exemplary registered school",
 		location: "Uganda Ministry of Education",
@@ -46,7 +46,7 @@ const testimonials = [
 		name: "Ibrahim Musoke",
 		role: "Parent & Business Owner",
 		relationship: "Father of 2 Walugogo VHS Students",
-		text: "The academic and practical training received at Walugogo VHS will shape my children's futures. It's a premium investment in their university and career readiness. Beyond excellent exam results—which are outstanding—I'm impressed by how the school develops critical thinking, professionalism, and practical skills. My children are thriving.",,
+		text: "The academic and practical training received at Walugogo VHS will shape my children's futures. It's a premium investment in their university and career readiness. Beyond excellent exam results—which are outstanding—I'm impressed by how the school develops critical thinking, professionalism, and practical skills. My children are thriving.",
 		rating: 5,
 		achievement: "Both children excelling academically and spiritually",
 		location: "Iganga, Uganda",
@@ -55,10 +55,10 @@ const testimonials = [
 		name: "Halima Nakato",
 		role: "Secondary School Graduate, Walugogo VHS",
 		relationship: "Student",
-		text: "I'm proud to have excelled academically while developing practical vocational skills. Walugogo VHS gave me the structure, quality teaching, and environment to achieve my university goals. The teachers care about your complete development, not just exam scores. This school prepared me excellently for A-Levels and university life.",,
+		text: "I'm proud to have excelled academically while developing practical vocational skills. Walugogo VHS gave me the structure, quality teaching, and environment to achieve my university goals. The teachers care about your complete development, not just exam scores. This school prepared me excellently for A-Levels and university life.",
 		rating: 5,
-		achiievement: "Scored 319+/400 in O-Levels and secured university admission",,
-		location: "Walugogo VHS, Iganga - Secondary Campus",,
+		achiievement: "Scored 319+/400 in O-Levels and secured university admission",
+		location: "Walugogo VHS, Iganga - Secondary Campus",
 	},
 ];
 
@@ -66,7 +66,7 @@ const testimonials = [
 const featuredStory = {
 	name: "Karim Hassan",
 	role: "Parent & Education Advocate",
-	text: "In a world of ordinary secondary schools, Walugogo VHS stands out. The teaching staff are among Uganda's best. They don't compromise on standards. Every student receives individual attention, and the academic environment is rigorous yet supportive. My child has grown exponentially—academically, professionally, and personally.",,
+	text: "In a world of ordinary secondary schools, Walugogo VHS stands out. The teaching staff are among Uganda's best. They don't compromise on standards. Every student receives individual attention, and the academic environment is rigorous yet supportive. My child has grown exponentially—academically, professionally, and personally.",
 	rating: 5,
 	achievement: "Outstanding institutional quality & results",
 	location: "Soroti, Uganda",
@@ -75,7 +75,7 @@ const featuredStory = {
 };
 
 const stats = [
-	{ number: "300+", label: "Secondary Students Enrolled Annually" },,
+	{ number: "300+", label: "Secondary Students Enrolled Annually" },
 	{ number: "100%", label: "Registered with Ministry" },
 	{ number: "319+", label: "Average PLE Distinction" },
 	{ number: "8+", label: "Years of Excellence" },
