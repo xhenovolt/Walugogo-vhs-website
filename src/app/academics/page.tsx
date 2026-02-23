@@ -2,82 +2,109 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Heart, Zap, Award, TrendingUp, Users, CheckCircle, Target } from "lucide-react";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useLanguage } from "@/i18n/LanguageContext";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function AcademicsPage() {
-  const { t } = useLanguage();
   const [expandedProgram, setExpandedProgram] = useState<string>("lower");
 
   const progressionLevels = [
     {
       id: "nursery",
-      level: t("academics.academicProgression.nursery.title"),
-      badge: t("academics.academicProgression.nursery.badge"),
+      level: "Nursery",
+      badge: "Early Years",
       color: "emerald",
       outcomes: [
-        t("academics.academicProgression.nursery.outcomes.0"),
-        t("academics.academicProgression.nursery.outcomes.1"),
-        t("academics.academicProgression.nursery.outcomes.2"),
-        t("academics.academicProgression.nursery.outcomes.3"),
+        "Social and emotional development",
+        "Basic communication skills",
+        "Introduction to numbers and letters",
+        "Motor skill development"
       ]
     },
     {
       id: "lower",
-      level: t("academics.academicProgression.lowerPrimary.title"),
-      badge: t("academics.academicProgression.lowerPrimary.badge"),
+      level: "Lower Primary (P1-P3)",
+      badge: "Foundation",
       color: "blue",
       outcomes: [
-        t("academics.academicProgression.lowerPrimary.outcomes.0"),
-        t("academics.academicProgression.lowerPrimary.outcomes.1"),
-        t("academics.academicProgression.lowerPrimary.outcomes.2"),
-        t("academics.academicProgression.lowerPrimary.outcomes.3"),
+        "Foundational numeracy and literacy",
+        "English language proficiency",
+        "Critical thinking development",
+        "Collaborative learning skills"
       ]
     },
     {
       id: "upper",
-      level: t("academics.academicProgression.upperPrimary.title"),
-      badge: t("academics.academicProgression.upperPrimary.badge"),
+      level: "Upper Primary (P4-P6)",
+      badge: "Intermediate",
       color: "purple",
       outcomes: [
-        t("academics.academicProgression.upperPrimary.outcomes.0"),
-        t("academics.academicProgression.upperPrimary.outcomes.1"),
-        t("academics.academicProgression.upperPrimary.outcomes.2"),
-        t("academics.academicProgression.upperPrimary.outcomes.3"),
+        "Advanced mathematics and science",
+        "Research and project skills",
+        "Leadership development",
+        "Technology integration"
       ]
     },
     {
       id: "primary7",
-      level: t("academics.academicProgression.primarySeven.title"),
-      badge: t("academics.academicProgression.primarySeven.badge"),
+      level: "Primary Seven",
+      badge: "Transition",
       color: "amber",
       outcomes: [
-        t("academics.academicProgression.primarySeven.outcomes.0"),
-        t("academics.academicProgression.primarySeven.outcomes.1"),
-        t("academics.academicProgression.primarySeven.outcomes.2"),
-        t("academics.academicProgression.primarySeven.outcomes.3"),
+        "National examination readiness",
+        "Career guidance and planning",
+        "Advanced academic subjects",
+        "Independent learning skills"
       ]
     }
   ];
 
   const graduationOutcomes = [
-    { icon: <Award className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome1") },
-    { icon: <TrendingUp className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome2") },
-    { icon: <Users className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome3") },
-    { icon: <Target className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome4") },
-    { icon: <BookOpen className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome5") },
-    { icon: <Heart className="w-6 h-6" />, text: t("academics.graduationOutcomes.outcome6") },
+    { icon: <Award className="w-6 h-6" />, text: "Achieves academic excellence and national recognition" },
+    { icon: <TrendingUp className="w-6 h-6" />, text: "Masters practical vocational skills for employment" },
+    { icon: <Users className="w-6 h-6" />, text: "Demonstrates strong character and ethical values" },
+    { icon: <Target className="w-6 h-6" />, text: "Pursues higher education or professional careers" },
+    { icon: <BookOpen className="w-6 h-6" />, text: "Becomes a lifelong learner with critical thinking" },
+    { icon: <Heart className="w-6 h-6" />, text: "Contributes positively to society and community" },
   ];
 
   const academicStandards = [
-    t("academics.academicStandards.metric1"),
-    t("academics.academicStandards.metric2"),
-    t("academics.academicStandards.metric3"),
-    t("academics.academicStandards.metric4"),
-    t("academics.academicStandards.metric5"),
-    t("academics.academicStandards.metric6"),
+    "100% pass rate through personalized attention",
+    "Modern facilities with technology integration",
+    "Small classes ensuring individual support",
+    "Qualified and experienced teaching staff",
+    "Continuous assessment and progress tracking",
+    "Holistic development beyond academics"
+  ];
+
+  const programs = [
+    {
+      id: "mainstream",
+      title: "Mainstream Subjects",
+      badge: "Core Curriculum",
+      description: "Comprehensive academic subjects combining theory with practical application",
+      subjects: [
+        "Mathematics - Numeracy and advanced problem solving",
+        "English - Language, literature, and communication",
+        "Science - Biology, chemistry, physics, and environmental studies",
+        "Social Studies - History, geography, and civic education",
+        "Physical Education - Sport, fitness, and wellness"
+      ]
+    },
+    {
+      id: "vocational",
+      title: "Vocational Skilling",
+      badge: "Practical Training",
+      description: "Hands-on technical training preparing students for immediate employment",
+      subjects: [
+        "Carpentry and woodwork - Building and furniture design",
+        "Welding and metal fabrication - Construction and manufacturing",
+        "Plumbing and electrical - Essential infrastructure skills",
+        "Agriculture - Sustainable farming and agribusiness",
+        "Digital skills - IT, coding, and computer literacy"
+      ]
+    }
   ];
 
   return (
@@ -94,274 +121,241 @@ export default function AcademicsPage() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              {t("academics.heading")}
+              Academics & Vocational Skilling
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">
-              {t("academics.description")}
-            </p>
-            <p className="text-sm text-emerald-700 dark:text-emerald-400 font-semibold">
-              {t("academics.academicProgression.subtitle")}
+              Combining rigorous academics with practical vocational skills for complete student development
             </p>
           </motion.div>
 
-          {/* Academic Facilities Image */}
+          {/* Image Placeholder */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl mb-16"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
           >
-            <Image
-              src="/Alhanan/Alhanan class bloack Ultra wide.jpeg"
-              alt="Walugogo Vocational High School classroom block showcasing modern academic facilities"
-              fill
-              className="object-cover"
-              sizes="100vw"
-              quality={85}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/70 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{t("academics.facilitiesTitle")}</h2>
-              <p className="text-white/90">{t("academics.facilitiesSubtitle")}</p>
-            </div>
+            <ImagePlaceholder width={1000} height={500} className="w-full h-[500px]" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Academic Progression */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+            }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Academic Progression
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Structured learning journey from early years through primary seven
+            </p>
           </motion.div>
 
-          {/* Academic Progression Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                {t("academics.academicProgression.title")}
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                {t("academics.academicProgression.subtitle")}
-              </p>
-            </div>
-
-            {/* Progression Timeline */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {progressionLevels.map((level, idx) => (
-                <motion.div
-                  key={level.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  onClick={() => setExpandedProgram(level.id)}
-                  className={`cursor-pointer rounded-2xl p-6 border transition-all duration-300 ${
-                    expandedProgram === level.id
-                      ? `bg-${level.color}-50 dark:bg-${level.color}-900/30 border-${level.color}-300`
-                      : "bg-white/80 dark:bg-gray-800/80 border-gray-200 dark:border-gray-700"
-                  }`}
-                >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gradient-to-br from-${level.color}-600 to-blue-600 text-white`}>
-                    <BookOpen className="w-6 h-6" />
+          <div className="space-y-6">
+            {progressionLevels.map((level, index) => (
+              <motion.div
+                key={level.id}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                onClick={() => setExpandedProgram(level.id)}
+                className="cursor-pointer"
+              >
+                <div className={`bg-gradient-to-r from-${level.color}-50 to-${level.color}-100 dark:from-gray-700 dark:to-gray-800 rounded-lg p-6 border-l-4 border-${level.color}-600`}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                        {level.level}
+                      </h3>
+                      <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold text-white bg-${level.color}-600`}>
+                        {level.badge}
+                      </span>
+                    </div>
+                    <motion.div
+                      animate={{ rotate: expandedProgram === level.id ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDown className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                    </motion.div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{level.level}</h3>
-                  <p className={`text-sm font-semibold text-${level.color}-600 dark:text-${level.color}-400 mb-3`}>
-                    {level.badge}
-                  </p>
+                  
                   {expandedProgram === level.id && (
-                    <motion.ul
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="space-y-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+                      transition={{ duration: 0.3 }}
+                      className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600"
                     >
-                      {level.outcomes.map((outcome, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-                          <CheckCircle className={`w-4 h-4 text-${level.color}-600 flex-shrink-0 mt-0.5`} />
-                          <span>{outcome}</span>
-                        </li>
-                      ))}
-                    </motion.ul>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Learning Outcomes:</h4>
+                      <ul className="space-y-3">
+                        {level.outcomes.map((outcome, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <CheckCircle className={`w-5 h-5 text-${level.color}-600 flex-shrink-0 mt-0.5`} />
+                            <span className="text-gray-700 dark:text-gray-300">{outcome}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   )}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {/* Graduation Outcomes Section */}
+      {/* Graduation Outcomes */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-600 to-blue-600 dark:from-emerald-900 dark:to-blue-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-emerald-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white mb-16 shadow-xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+            }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">{t("academics.graduationOutcomes.title")}</h2>
-            <p className="text-center text-emerald-50 mb-8 text-lg">{t("academics.graduationOutcomes.subtitle")}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {graduationOutcomes.map((outcome, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="flex items-start gap-4 bg-white/10 rounded-xl p-4 backdrop-blur"
-                >
-                  <div className="text-emerald-200 flex-shrink-0">{outcome.icon}</div>
-                  <p className="text-white leading-relaxed">{outcome.text}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Academic Standards Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-              {t("academics.academicStandards.title")}
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our Graduation Outcomes
             </h2>
-            <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
+              Every student leaves Walugogo VHS with skills, character, and opportunity for success
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {graduationOutcomes.map((outcome, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur rounded-lg p-8 border border-white/20 hover:border-white/40 transition-all"
+              >
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-white mb-4">
+                  {outcome.icon}
+                </div>
+                <p className="text-white text-lg leading-relaxed">{outcome.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Standards */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+            }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Our Academic Standards
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
               Non-negotiable commitment to excellence at every level
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {academicStandards.map((standard, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="flex items-start gap-3 p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-700/50"
-                >
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700 dark:text-gray-300">{standard}</p>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
-          {/* Core Academic Programs - Enhanced */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Qur'an Memorization */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-8 md:p-12 border border-emerald-200 dark:border-emerald-700/50"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                  <BookOpen className="w-7 h-7" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {academicStandards.map((standard, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-700 dark:to-gray-800 rounded-lg p-6 border border-emerald-200 dark:border-gray-600"
+              >
+                <div className="flex items-start gap-4">
+                  <Zap className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <p className="text-gray-700 dark:text-gray-300">{standard}</p>
                 </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {t("academics.quran.title")}
-                  </h2>
-                  <p className="text-emerald-600 dark:text-emerald-400 font-semibold mt-1">
-                    {t("academics.quran.badge")}
-                  </p>
-                </div>
-              </div>
-              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                {t("academics.quran.description")}
-              </p>
-              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                {[
-                  t("academics.quran.feature1"),
-                  t("academics.quran.feature2"),
-                  t("academics.quran.feature3"),
-                  t("academics.quran.feature4"),
-                  t("academics.quran.feature5")
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-emerald-600 mt-1">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Islamic Studies */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-8 md:p-12 border border-blue-200 dark:border-blue-700/50"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                  <Heart className="w-7 h-7" />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {t("academics.islamic.title")}
-                  </h2>
-                  <p className="text-blue-600 dark:text-blue-400 font-semibold mt-1">
-                    {t("academics.islamic.badge")}
-                  </p>
-                </div>
-              </div>
-              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                {t("academics.islamic.description")}
-              </p>
-              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                {[
-                  t("academics.islamic.feature1"),
-                  t("academics.islamic.feature2"),
-                  t("academics.islamic.feature3"),
-                  t("academics.islamic.feature4"),
-                  t("academics.islamic.feature5")
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-blue-600 mt-1">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+      {/* Programs Section */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+            }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Our Programs
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Balanced education combining academics with practical vocational training
+            </p>
+          </motion.div>
 
-            {/* Primary Education */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white/80 dark:bg-gray-800/80 rounded-3xl p-8 md:p-12 border border-cyan-200 dark:border-cyan-700/50"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-emerald-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
-                  <Zap className="w-7 h-7" />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {t("academics.primary.title")}
-                  </h2>
-                  <p className="text-cyan-600 dark:text-cyan-400 font-semibold mt-1">
-                    {t("academics.primary.badge")}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {programs.map((program, index) => (
+              <motion.div
+                key={program.id}
+                initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all"
+              >
+                <div className={`h-2 bg-gradient-to-r ${index === 0 ? "from-blue-600 to-cyan-600" : "from-emerald-600 to-teal-600"}`} />
+                
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
+                      {program.title}
+                    </h3>
+                    <span className={`px-4 py-2 rounded-full text-sm font-semibold text-white ${index === 0 ? "bg-blue-600" : "bg-emerald-600"}`}>
+                      {program.badge}
+                    </span>
+                  </div>
+                  
+                  <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+                    {program.description}
                   </p>
+                  
+                  <div className="space-y-4">
+                    {program.subjects.map((subject, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <BookOpen className={`w-5 h-5 ${index === 0 ? "text-blue-600" : "text-emerald-600"} flex-shrink-0 mt-1`} />
+                        <span className="text-gray-700 dark:text-gray-300">{subject}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                {t("academics.primary.description")}
-              </p>
-              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                {[
-                  t("academics.primary.feature1"),
-                  t("academics.primary.feature2"),
-                  t("academics.primary.feature3"),
-                  t("academics.primary.feature4"),
-                  t("academics.primary.feature5")
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-cyan-600 mt-1">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -370,3 +364,6 @@ export default function AcademicsPage() {
     </main>
   );
 }
+
+// Import ChevronDown icon that was missing
+import { ChevronDown } from "lucide-react";

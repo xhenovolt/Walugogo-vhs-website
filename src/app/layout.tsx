@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Tajawal } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Chatbot from "../components/Chatbot";
-import { LanguageProvider } from "../i18n/LanguageContext";
-import DynamicTranslator from "../components/DynamicTranslator";
 import MobileBottomNav from "../components/MobileBottomNav";
 
 const inter = Inter({
@@ -13,22 +11,16 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const tajawal = Tajawal({
-  variable: "--font-tajawal",
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "700", "800", "900"],
-});
-
 export const metadata: Metadata = {
-  title: "Walugogo Vocational High School | Premium Muslim School in Uganda",
+  title: "Walugogo Vocational High School | Uganda's Premier Vocational Learning Hub",
   description:
-    "Walugogo Vocational High School offers premium Islamic education combining Qur'anic memorization (Hifdh) with rigorous academics in Iganga, Uganda. Founded 2019 by Ummul Qura Foundation, registered with Ministry of Education.",
-  keywords: "Islamic school Uganda, Qur'an memorization, Hifdh school, primary education, Muslim school Iganga, Walugogo Vocational High School",
+    "Walugogo Vocational High School combines rigorous academics with practical vocational skilling in Iganga, Uganda. 100% pass rate. Zero failure rate. Where every student succeeds.",
+  keywords: "vocational school Uganda, technical education, carpentry welding plumbing, practical skills, secondary education, Iganga Uganda",
   authors: [{ name: "Walugogo Vocational High School" }],
   creator: "Walugogo Vocational High School",
-  metadataBase: new URL("https://alhanan.ug"),
+  metadataBase: new URL("https://walugogo-vhs.edu.ug"),
   alternates: {
-    canonical: "https://alhanan.ug",
+    canonical: "https://walugogo-vhs.edu.ug",
   },
   icons: {
     icon: "/Walugogologo-Photoroom.png",
@@ -36,23 +28,23 @@ export const metadata: Metadata = {
     shortcut: "/Walugogologo-Photoroom.png",
   },
   openGraph: {
-    title: "Walugogo Vocational High School | Premium Muslim School",
-    description: "Shaping minds, nurturing faith, building the future",
+    title: "Walugogo Vocational High School | Uganda's Premier Vocational Hub",
+    description: "100% pass rate. Zero failure rate. Where every student succeeds.",
     type: "website",
     locale: "en_US",
     siteName: "Walugogo Vocational High School",
-    url: "https://alhanan.ug",
+    url: "https://walugogo-vhs.edu.ug",
     images: {
       url: "/Walugogologo-Photoroom.png",
       width: 1200,
-      height: 800,
+      height: 630,
       alt: "Walugogo Vocational High School Logo",
     },
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walugogo Vocational High School | Premium Muslim School",
-    description: "Shaping minds, nurturing faith, building the future",
+    title: "Walugogo Vocational High School",
+    description: "100% pass rate. Zero failure rate. Where every student succeeds.",
     images: "/Walugogologo-Photoroom.png",
   },
   robots: {
@@ -82,25 +74,22 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${inter.variable} ${tajawal.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
-        <LanguageProvider>
-          <DynamicTranslator />
-          <div className="min-h-screen relative overflow-x-hidden pb-20 lg:pb-0">
-            {/* Animated background elements */}
-            <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-            </div>
-            <div className="relative z-10">
-              {children}
-            </div>
-            <Chatbot />
+      <body className={`${inter.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300`}>
+        <div className="min-h-screen relative overflow-x-hidden pb-20 lg:pb-0">
+          {/* Animated background elements */}
+          <div className="fixed inset-0 opacity-20 dark:opacity-10 pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400 rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
           </div>
-          {/* Mobile Bottom Navigation - Only visible on mobile */}
-          <div className="lg:hidden">
-            <MobileBottomNav />
+          <div className="relative z-10">
+            {children}
           </div>
-        </LanguageProvider>
+          <Chatbot />
+        </div>
+        {/* Mobile Bottom Navigation - Only visible on mobile */}
+        <div className="lg:hidden">
+          <MobileBottomNav />
+        </div>
       </body>
     </html>
   );
