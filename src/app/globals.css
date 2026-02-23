@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+:root {
+  /* Walugogo Vocational High School - Deep Electric Blue & Navy Theme */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Primary Colors - Deep Electric Blue & Navy */
+  --primary-blue: #0066cc;         /* Deep Electric Blue - trust, excellence, professionalism */
+  --primary-blue-dark: #004499;    /* Darker blue for text/elements */
+  --primary-navy: #1a2c5e;         /* Deep Navy Blue - dark backgrounds, sophistication */
+  --primary-navy-dark: #0f1a3e;    /* Even darker navy for emphasis */
+  
+  /* Accent Colors */
+  --accent-cream: #f5f1e8;         /* Cream accent - readability, warmth */
+  --accent-gold: #d4af37;          /* Gold for highlights and premium feel */
+  
+  /* Semantic Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #0066cc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Walugogo Custom Gradient Classes */
+.gradient-walugogo {
+  @apply bg-gradient-to-r from-blue-600 via-blue-700 to-blue-900;
+}
+
+.gradient-walugogo-dark {
+  @apply bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900;
+}
+
+.gradient-walugogo-hero {
+  @apply bg-gradient-to-br from-blue-800 via-blue-900 to-slate-950;
+}
+
+/* RTL Support */
+html.rtl {
+  font-family: var(--font-tajawal), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  direction: rtl;
+}
+
+html.rtl body {
+  direction: rtl;
+}
+
+html.rtl * {
+  --tw-translate-x: 0;
+}
+
+/* RTL-specific Tailwind adjustments */
+html.rtl .flex {
+  flex-direction: row-reverse;
+}
+
+html.rtl .flex-row-reverse {
+  flex-direction: row;
+}
+
+html.rtl .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 1rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 1.5rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-inline-start: 2rem;
+  margin-inline-end: 0;
+}
+
+html.rtl .text-left {
+  text-align: right;
+}
+
+html.rtl .text-right {
+  text-align: left;
+}
+
+html.rtl .ml-2 {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html.rtl .ml-4 {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+html.rtl .ml-6 {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+html.rtl .mr-2 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html.rtl .mr-4 {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+html.rtl .mr-6 {
+  margin-left: 1.5rem;
+  margin-right: 0;
+}
+
+html.rtl .pl-4 {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+html.rtl .pl-6 {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+html.rtl .pr-4 {
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+html.rtl .pr-6 {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+html.rtl .border-l-2 {
+  border-right: 2px;
+  border-left: none;
+}
+
+html.rtl .border-r {
+  border-left: 1px;
+  border-right: none;
+}
+
+html.rtl .border-l {
+  border-right: 1px;
+  border-left: none;
+}
+
+/* Smooth language transition */
+html {
+  transition: direction 0.3s ease, font-family 0.3s ease;
+}
+
+body {
+  transition: all 0.3s ease;
+}
+
+/* Safe Area Support for Notch Devices */
+@supports (padding: max(0px)) {
+  .safe-area-inset-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 0px);
+  }
+  
+  .safe-area-inset-left {
+    padding-left: max(env(safe-area-inset-left), 0px);
+  }
+  
+  .safe-area-inset-right {
+    padding-right: max(env(safe-area-inset-right), 0px);
+  }
+  
+  .safe-area-inset-top {
+    padding-top: max(env(safe-area-inset-top), 0px);
+  }
+}
+
+/* Touch Target Sizing - Minimum 44x44 for accessibility */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improved scrolling performance on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .overscroll-contain {
+    -webkit-overscroll-behavior: contain;
+    overscroll-behavior: contain;
+  }
+  
+  /* Disable double-tap zoom on buttons/links */
+  button, a, [role="button"] {
+    touch-action: manipulation;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
