@@ -115,48 +115,88 @@ Learn More
 </div>
 </motion.div>
 
-{/* Stats Card */}
+{/* Carousel - Main Hero */}
 <motion.div
 initial={{ opacity: 0, x: 50 }}
 animate={{ opacity: 1, x: 0 }}
 transition={{ duration: 0.8, delay: 0.2 }}
-className="relative"
+className="relative group"
 >
-<div className="bg-white/10 dark:bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-white/20 dark:border-white/10 shadow-2xl">
-<div className="grid grid-cols-2 gap-4 mb-8">
+<div className="relative overflow-hidden rounded-3xl shadow-2xl h-[500px]">
+<AnimatePresence mode="wait">
 <motion.div
-whileHover={{ scale: 1.05 }}
-className="bg-gradient-to-br from-white/20 to-white/10 p-4 rounded-xl text-center backdrop-blur"
+key={carouselIndex}
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+transition={{ duration: 0.8 }}
+className="absolute inset-0"
 >
-<div className="text-3xl font-bold text-white mb-1">17</div>
-<p className="text-white/80 text-sm font-semibold">Students (2025)</p>
+<Image
+src={carouselImages[carouselIndex].src}
+alt={carouselImages[carouselIndex].alt}
+fill
+className="object-cover"
+priority
+/>
 </motion.div>
-<motion.div
-whileHover={{ scale: 1.05 }}
-className="bg-gradient-to-br from-white/20 to-white/10 p-4 rounded-xl text-center backdrop-blur"
+</AnimatePresence>
+
+{/* Gradient Overlay */}
+<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+{/* Navigation Buttons */}
+<button
+onClick={prevSlide}
+className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white dark:bg-black/90 dark:hover:bg-black rounded-full p-3 transition-all shadow-lg opacity-0 group-hover:opacity-100"
+aria-label="Previous slide"
 >
-<div className="text-3xl font-bold text-emerald-300 mb-1">100%</div>
-<p className="text-white/80 text-sm font-semibold">Pass Rate</p>
-</motion.div>
+<ChevronLeft className="w-6 h-6 text-slate-900 dark:text-white" />
+</button>
+
+<button
+onClick={nextSlide}
+className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white dark:bg-black/90 dark:hover:bg-black rounded-full p-3 transition-all shadow-lg opacity-0 group-hover:opacity-100"
+aria-label="Next slide"
+>
+<ChevronRight className="w-6 h-6 text-slate-900 dark:text-white" />
+</button>
+
+{/* Dot Indicators */}
+<div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+{carouselImages.map((_, index) => (
+<button
+key={index}
+onClick={() => setCarouselIndex(index)}
+className={`transition-all duration-300 rounded-full ${
+index === carouselIndex
+? "bg-white w-8 h-3"
+: "bg-white/50 w-3 h-3 hover:bg-white/80"
+}`}
+aria-label={`Go to slide ${index + 1}`}
+/>
+))}
 </div>
 
-<div className="space-y-4">
-<div className="flex items-center gap-3">
-<CheckCircle2 className="w-5 h-5 text-emerald-300 flex-shrink-0" />
-<span className="text-white text-sm">2A's, 3B's, 12C's Performance</span>
-</div>
-<div className="flex items-center gap-3">
-<CheckCircle2 className="w-5 h-5 text-emerald-300 flex-shrink-0" />
-<span className="text-white text-sm">Zero Failure Rate Achievement</span>
-</div>
-<div className="flex items-center gap-3">
-<CheckCircle2 className="w-5 h-5 text-emerald-300 flex-shrink-0" />
-<span className="text-white text-sm">Personal Attention to Every Student</span>
-</div>
-<div className="flex items-center gap-3">
-<CheckCircle2 className="w-5 h-5 text-emerald-300 flex-shrink-0" />
-<span className="text-white text-sm">Modern Vocational Facilities</span>
-</div>
+{/* Info Section */}
+<div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+<motion.div
+key={carouselIndex}
+initial={{ opacity: 0, y: 10 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5, delay: 0.2 }}
+>
+<h3 className="text-3xl font-bold mb-3">
+{carouselIndex === 0 && "Learning Spaces of Excellence"}
+{carouselIndex === 1 && "Student Research & Growth"}
+{carouselIndex === 2 && "Knowledge & Achievement"}
+</h3>
+<p className="text-white/95 text-lg">
+{carouselIndex === 0 && "State-of-the-art library facilities designed for student success"}
+{carouselIndex === 1 && "Dedicated environments for focused study and academic excellence"}
+{carouselIndex === 2 && "Rich resources supporting our 100% pass rate commitment"}
+</p>
+</motion.div>
 </div>
 </div>
 </motion.div>
@@ -239,90 +279,24 @@ Our state-of-the-art library and learning facilities provide the perfect environ
 </motion.div>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-{/* Carousel - Featured Library Images */}
+{/* Featured Library Images */}
 <motion.div
 initial={{ opacity: 0, x: -30 }}
 whileInView={{ opacity: 1, x: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 0.8 }}
-className="relative group"
->
-<div className="relative overflow-hidden rounded-3xl shadow-2xl h-[400px]">
-<AnimatePresence mode="wait">
-<motion.div
-key={carouselIndex}
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
-exit={{ opacity: 0 }}
-transition={{ duration: 0.8 }}
-className="absolute inset-0"
+className="relative h-[400px] overflow-hidden rounded-3xl shadow-2xl"
 >
 <Image
-src={carouselImages[carouselIndex].src}
-alt={carouselImages[carouselIndex].alt}
+src="/Walugogo/Library1.JPG"
+alt="Modern library facilities"
 fill
 className="object-cover"
-priority
 />
-</motion.div>
-</AnimatePresence>
-
-{/* Gradient Overlay */}
-<div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-
-{/* Navigation Buttons */}
-<button
-onClick={prevSlide}
-className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white dark:bg-black/80 dark:hover:bg-black rounded-full p-2 transition-all shadow-lg opacity-0 group-hover:opacity-100"
-aria-label="Previous slide"
->
-<ChevronLeft className="w-6 h-6 text-slate-900 dark:text-white" />
-</button>
-
-<button
-onClick={nextSlide}
-className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white dark:bg-black/80 dark:hover:bg-black rounded-full p-2 transition-all shadow-lg opacity-0 group-hover:opacity-100"
-aria-label="Next slide"
->
-<ChevronRight className="w-6 h-6 text-slate-900 dark:text-white" />
-</button>
-
-{/* Dot Indicators */}
-<div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-{carouselImages.map((_, index) => (
-<button
-key={index}
-onClick={() => setCarouselIndex(index)}
-className={`transition-all duration-300 rounded-full ${
-index === carouselIndex
-? "bg-white w-8 h-2"
-: "bg-white/50 w-2 h-2 hover:bg-white/70"
-}`}
-aria-label={`Go to slide ${index + 1}`}
-/>
-))}
-</div>
-
-{/* Info Section */}
+<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-<motion.div
-key={carouselIndex}
-initial={{ opacity: 0, y: 10 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.5, delay: 0.2 }}
->
-<h3 className="text-2xl font-bold mb-2">
-{carouselIndex === 0 && "Modern Library Learning Spaces"}
-{carouselIndex === 1 && "Student Research & Reading Area"}
-{carouselIndex === 2 && "Knowledge Resources & Facilities"}
-</h3>
-<p className="text-white/90 text-sm">
-{carouselIndex === 0 && "Inspiring learning environments designed for academic excellence"}
-{carouselIndex === 1 && "Dedicated spaces for focused study and research"}
-{carouselIndex === 2 && "Rich collection of resources supporting student success"}
-</p>
-</motion.div>
-</div>
+<h3 className="text-2xl font-bold mb-2">Modern Library Facilities</h3>
+<p className="text-white/90">Comprehensive resources for research and learning</p>
 </div>
 </motion.div>
 
