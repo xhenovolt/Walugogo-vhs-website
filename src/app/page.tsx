@@ -197,6 +197,134 @@ className="bg-gradient-to-br from-blue-50 to-slate-50 dark:from-slate-700 dark:t
 </div>
 </section>
 
+{/* Learning Spaces Section */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+<div className="max-w-7xl mx-auto px-4 sm:px-6">
+<motion.div
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, amount: 0.3 }}
+variants={{
+hidden: { opacity: 0 },
+visible: {
+opacity: 1,
+transition: { staggerChildren: 0.1 },
+},
+}}
+className="text-center mb-16"
+>
+<h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+World-Class Learning Spaces
+</h2>
+<p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+Our state-of-the-art library and learning facilities provide the perfect environment for academic excellence
+</p>
+</motion.div>
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+{/* Featured Large Library Image */}
+<motion.div
+initial={{ opacity: 0, x: -30 }}
+whileInView={{ opacity: 1, x: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.8 }}
+className="relative overflow-hidden rounded-3xl shadow-2xl h-[400px]"
+>
+<Image
+src="/Walugogo/Library1.JPG"
+alt="Modern library facilities"
+fill
+className="object-cover"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+<h3 className="text-2xl font-bold mb-2">Modern Library Facilities</h3>
+<p className="text-white/90">Comprehensive resources for research and learning</p>
+</div>
+</motion.div>
+
+{/* Right Side: 2 Smaller Library Images */}
+<div className="grid grid-cols-1 gap-4">
+<motion.div
+initial={{ opacity: 0, x: 30 }}
+whileInView={{ opacity: 1, x: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.8, delay: 0.1 }}
+className="relative overflow-hidden rounded-2xl shadow-lg h-[190px]"
+>
+<Image
+src="/Walugogo/LearnersInTheLibrary1.JPG"
+alt="Students engaged in learning"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
+<div className="text-white">
+<p className="font-semibold">Focused Study Environment</p>
+</div>
+</div>
+</motion.div>
+
+<motion.div
+initial={{ opacity: 0, x: 30 }}
+whileInView={{ opacity: 1, x: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.8, delay: 0.2 }}
+className="relative overflow-hidden rounded-2xl shadow-lg h-[190px]"
+>
+<Image
+src="/Walugogo/Library7.JPG"
+alt="Library resources and books"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
+<div className="text-white">
+<p className="font-semibold">Rich Knowledge Resources</p>
+</div>
+</div>
+</motion.div>
+</div>
+</div>
+
+{/* Key Features of Learning Spaces */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<motion.div
+initial={{ opacity: 0, y: 20 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ delay: 0.3 }}
+className="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md border-l-4 border-emerald-600"
+>
+<h4 className="font-bold text-slate-900 dark:text-white mb-2">Research Hub</h4>
+<p className="text-slate-600 dark:text-slate-300 text-sm">Comprehensive collection of books, journals, and digital resources for student research</p>
+</motion.div>
+
+<motion.div
+initial={{ opacity: 0, y: 20 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ delay: 0.4 }}
+className="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md border-l-4 border-blue-600"
+>
+<h4 className="font-bold text-slate-900 dark:text-white mb-2">Quiet Study Spaces</h4>
+<p className="text-slate-600 dark:text-slate-300 text-sm">Dedicated areas for concentrated learning and preparation for examinations</p>
+</motion.div>
+
+<motion.div
+initial={{ opacity: 0, y: 20 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ delay: 0.5 }}
+className="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md border-l-4 border-cyan-600"
+>
+<h4 className="font-bold text-slate-900 dark:text-white mb-2">Digital Access</h4>
+<p className="text-slate-600 dark:text-slate-300 text-sm">Computer terminals and internet access for research and online learning resources</p>
+</motion.div>
+</div>
+</div>
+</section>
+
 {/* Success Panel - 2025 Results */}
 <SuccessPanel />
 
