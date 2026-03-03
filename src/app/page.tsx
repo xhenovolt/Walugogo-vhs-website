@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, Users, Briefcase, Award, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -213,7 +214,73 @@ Campus Life
 Experience the vibrant community and modern facilities at Walugogo VHS
 </p>
 </div>
-<ImagePlaceholder width={800} height={400} className="mx-auto" />
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<motion.div
+initial={{ opacity: 0, scale: 0.9 }}
+whileInView={{ opacity: 1, scale: 1 }}
+viewport={{ once: true }}
+transition={{ delay: 0 }}
+className="relative overflow-hidden rounded-lg shadow-lg h-[250px] col-span-1 md:col-span-1"
+>
+<Image
+src="/Walugogo/Library2.JPG"
+alt="Library facilities"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+</motion.div>
+<motion.div
+initial={{ opacity: 0, scale: 0.9 }}
+whileInView={{ opacity: 1, scale: 1 }}
+viewport={{ once: true }}
+transition={{ delay: 0.1 }}
+className="relative overflow-hidden rounded-lg shadow-lg h-[250px] col-span-1 md:col-span-1"
+>
+<Image
+src="/Walugogo/LearnersInTheLibrary2.JPG"
+alt="Students studying"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+</motion.div>
+<motion.div
+initial={{ opacity: 0, scale: 0.9 }}
+whileInView={{ opacity: 1, scale: 1 }}
+viewport={{ once: true }}
+transition={{ delay: 0.2 }}
+className="relative overflow-hidden rounded-lg shadow-lg h-[250px] col-span-1 md:col-span-1"
+>
+<Image
+src="/Walugogo/Learning Session2.JPG"
+alt="Classroom engagement"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+</motion.div>
+<motion.div
+initial={{ opacity: 0, scale: 0.9 }}
+whileInView={{ opacity: 1, scale: 1 }}
+viewport={{ once: true }}
+transition={{ delay: 0.3 }}
+className="relative overflow-hidden rounded-lg shadow-lg h-[250px] col-span-1 md:col-span-2"
+>
+<Image
+src="/Walugogo/ClassBlock1.JPG"
+alt="Modern classroom blocks"
+fill
+className="object-cover hover:scale-110 transition-transform duration-300"
+/>
+</motion.div>
+</div>
+<div className="text-center mt-8">
+<Link
+href="/gallery"
+className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+>
+View Full Gallery
+<ArrowRight className="w-5 h-5" />
+</Link>
+</div>
 </div>
 </section>
 

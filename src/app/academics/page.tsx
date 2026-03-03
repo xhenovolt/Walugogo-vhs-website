@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { BookOpen, Heart, Zap, Award, TrendingUp, Users, CheckCircle, Target, ChevronDown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -157,9 +158,63 @@ export default function AcademicsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
+            className="mb-12 grid grid-cols-2 md:grid-cols-3 gap-4"
           >
-            <ImagePlaceholder width={1000} height={500} className="w-full h-[500px]" />
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg h-[300px] col-span-1"
+            >
+              <Image
+                src="/Walugogo/Learning Session1.JPG"
+                alt="Active learning session"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg h-[300px] col-span-1"
+            >
+              <Image
+                src="/Walugogo/Learning Session2.JPG"
+                alt="Classroom engagement"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg h-[300px] col-span-1"
+            >
+              <Image
+                src="/Walugogo/Learning Session3.JPG"
+                alt="Student learning"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg h-[300px] col-span-2 md:col-span-1"
+            >
+              <Image
+                src="/Walugogo/ClassBlock1.JPG"
+                alt="Modern classroom blocks"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg h-[300px] col-span-2 md:col-span-2"
+            >
+              <Image
+                src="/Walugogo/ClassBlock2.JPG"
+                alt="Class block facilities"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -353,6 +408,17 @@ export default function AcademicsPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all"
               >
+                {/* Program Image */}
+                <div className="relative w-full h-[250px] overflow-hidden">
+                  <Image
+                    src={index === 0 ? "/Walugogo/LearnersInTheLibrary1.JPG" : "/Walugogo/ClassBlock3.JPG"}
+                    alt={program.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent`} />
+                </div>
+                
                 <div className={`h-2 bg-gradient-to-r ${index === 0 ? "from-blue-600 to-cyan-600" : "from-emerald-600 to-teal-600"}`} />
                 
                 <div className="p-8">

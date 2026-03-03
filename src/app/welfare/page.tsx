@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Heart, Shield, Users, Utensils, BookOpen, Smile } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -72,7 +73,14 @@ export default function WelfarePage() {
             transition={{ duration: 0.8 }}
             className="rounded-3xl overflow-hidden shadow-2xl"
           >
-            <ImagePlaceholder width={1000} height={500} className="w-full h-[500px]" />
+            <div className="relative h-[500px] overflow-hidden">
+              <Image
+                src="/Walugogo/Library4.JPG"
+                alt="Student welfare and campus facilities"
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </section>

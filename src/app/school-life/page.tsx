@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -70,7 +71,14 @@ export default function SchoolLifePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Sports & Recreation Block */}
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <ImagePlaceholder width={500} height={350} className="w-full h-[350px]" />
+                <div className="relative h-[350px] overflow-hidden">
+                  <Image
+                    src="/Walugogo/Signpost3.JPG"
+                    alt="Sports & Recreation facilities"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-6 bg-white dark:bg-gray-800">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Sports & Recreation</h2>
                   <p className="text-gray-600 dark:text-gray-300">Complete facilities for athletics, football, volleyball, and team sports development</p>
@@ -78,7 +86,14 @@ export default function SchoolLifePage() {
               </div>
               {/* Classroom Block */}
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <ImagePlaceholder width={500} height={350} className="w-full h-[350px]" />
+                <div className="relative h-[350px] overflow-hidden">
+                  <Image
+                    src="/Walugogo/ClassBlock1.JPG"
+                    alt="Academic Excellence"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-6 bg-white dark:bg-gray-800">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Academic Excellence</h2>
                   <p className="text-gray-600 dark:text-gray-300">Interactive learning and scholarly engagement in modern classrooms</p>
@@ -99,21 +114,63 @@ export default function SchoolLifePage() {
               Student Activities & Moments
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="rounded-2xl overflow-hidden shadow-lg"
-                >
-                  <ImagePlaceholder width={400} height={250} className="w-full h-[250px]" />
-                  <div className="p-4 bg-white dark:bg-gray-800">
-                    <p className="text-gray-600 dark:text-gray-300">Student activities during school moments</p>
-                  </div>
-                </motion.div>
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0 }}
+                className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              >
+                <div className="relative h-[250px] overflow-hidden">
+                  <Image
+                    src="/Walugogo/Learning Session1.JPG"
+                    alt="Student activities 1"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 bg-white dark:bg-gray-800">
+                  <p className="text-gray-600 dark:text-gray-300">Engaging learning moments in class</p>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              >
+                <div className="relative h-[250px] overflow-hidden">
+                  <Image
+                    src="/Walugogo/LearnersInTheLibrary3.JPG"
+                    alt="Student activities 2"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 bg-white dark:bg-gray-800">
+                  <p className="text-gray-600 dark:text-gray-300">Focused study and research sessions</p>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              >
+                <div className="relative h-[250px] overflow-hidden">
+                  <Image
+                    src="/Walugogo/Learning Session4.JPG"
+                    alt="Student activities 3"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 bg-white dark:bg-gray-800">
+                  <p className="text-gray-600 dark:text-gray-300">Interactive classroom discussions</p>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -156,7 +213,14 @@ export default function SchoolLifePage() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
               Campus Life Media
             </h2>
-            <ImagePlaceholder width={800} height={450} className="w-full h-[450px] mx-auto" />
+            <div className="relative h-[450px] overflow-hidden rounded-2xl">
+              <Image
+                src="/Walugogo/Library6.JPG"
+                alt="Campus life media"
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
 
           {/* Cultural Celebration */}

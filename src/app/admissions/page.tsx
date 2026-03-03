@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { DollarSign, Building2, BookOpen, Heart, Briefcase, CheckCircle2, ArrowRight, Copy, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -282,7 +283,14 @@ className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-700 dark:t
 </div>
 
 {/* Image Placeholder */}
-<ImagePlaceholder width={800} height={400} className="mb-12" />
+<div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg mb-12">
+<Image
+src="/Walugogo/LearnersInTheLibrary5.JPG"
+alt="Walugogo VHS admission information"
+fill
+className="object-cover"
+/>
+</div>
 </div>
 </section>
 

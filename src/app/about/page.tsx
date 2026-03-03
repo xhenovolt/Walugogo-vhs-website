@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Target, Eye, Heart, BookOpen, Users, Sparkles, CheckCircle, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -96,7 +97,15 @@ viewport={{ once: true }}
 transition={{ duration: 0.8 }}
 className="relative"
 >
-<ImagePlaceholder width={500} height={400} className="w-full h-auto" />
+<div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
+<Image
+src="/Walugogo/Library3.JPG"
+alt="Our Story - Walugogo VHS Learning Environment"
+fill
+className="object-cover"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+</div>
 </motion.div>
 </div>
 </div>
@@ -205,9 +214,16 @@ From world-class facilities to disciplined learning environments
 initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/Library1.JPG"
+alt="Modern Infrastructure"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Modern Infrastructure</h3>
 </div>
@@ -218,9 +234,16 @@ initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: 0.1 }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/LearnersInTheLibrary1.JPG"
+alt="Academic Excellence"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Academic Excellence</h3>
 </div>
@@ -231,9 +254,16 @@ initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: 0.2 }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/Learning Session1.JPG"
+alt="Holistic Development"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Holistic Development</h3>
 </div>
@@ -244,9 +274,16 @@ initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: 0.3 }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/Library5.JPG"
+alt="Nurturing Care"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Nurturing Care</h3>
 </div>
@@ -257,9 +294,16 @@ initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: 0.4 }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/LearnersInTheLibrary4.JPG"
+alt="Student Wellness"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Student Wellness</h3>
 </div>
@@ -270,9 +314,16 @@ initial={{ opacity: 0, y: 20 }}
 whileInView={{ opacity: 1, y: 0 }}
 viewport={{ once: true }}
 transition={{ delay: 0.5 }}
-className="rounded-2xl overflow-hidden shadow-lg"
+className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
 >
-<ImagePlaceholder width={400} height={280} className="w-full h-[280px]" />
+<div className="relative h-[280px] overflow-hidden">
+<Image
+src="/Walugogo/ClassBlock2.JPG"
+alt="Advanced Facilities"
+fill
+className="object-cover group-hover:scale-110 transition-transform duration-300"
+/>
+</div>
 <div className="p-4 bg-white dark:bg-gray-800">
 <h3 className="font-bold text-gray-900 dark:text-white">Advanced Facilities</h3>
 </div>
