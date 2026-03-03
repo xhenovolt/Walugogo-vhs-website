@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Users, Briefcase, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Users, Briefcase, Award, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -11,6 +11,23 @@ import AcademicsSection from "../components/AcademicsSection";
 import ImagePlaceholder from "../components/ImagePlaceholder";
 
 export default function HomePage() {
+const [carouselIndex, setCarouselIndex] = useState(0);
+const carouselImages = [
+{ src: "/Walugogo/Library5.JPG", alt: "Modern library learning spaces" },
+{ src: "/Walugogo/Library6.JPG", alt: "Student research and reading area" },
+{ src: "/Walugogo/Library7.JPG", alt: "Knowledge resources and facilities" },
+];
+
+useEffect(() => {
+const interval = setInterval(() => {
+setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
+}, 5000);
+return () => clearInterval(interval);
+}, []);
+
+const nextSlide = () => setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
+const prevSlide = () => setCarouselIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+
 const features = [
 {
 icon: <CheckCircle2 className="w-8 h-8" />,
@@ -222,24 +239,90 @@ Our state-of-the-art library and learning facilities provide the perfect environ
 </motion.div>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-{/* Featured Large Library Image */}
+{/* Carousel - Featured Library Images */}
 <motion.div
 initial={{ opacity: 0, x: -30 }}
 whileInView={{ opacity: 1, x: 0 }}
 viewport={{ once: true }}
 transition={{ duration: 0.8 }}
-className="relative overflow-hidden rounded-3xl shadow-2xl h-[400px]"
+className="relative group"
+>
+<div className="relative overflow-hidden rounded-3xl shadow-2xl h-[400px]">
+<AnimatePresence mode="wait">
+<motion.div
+key={carouselIndex}
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+transition={{ duration: 0.8 }}
+className="absolute inset-0"
 >
 <Image
-src="/Walugogo/Library1.JPG"
-alt="Modern library facilities"
+src={carouselImages[carouselIndex].src}
+alt={carouselImages[carouselIndex].alt}
 fill
 className="object-cover"
+priority
 />
-<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+</motion.div>
+</AnimatePresence>
+
+{/* Gradient Overlay */}
+<div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+{/* Navigation Buttons */}
+<button
+onClick={prevSlide}
+className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white dark:bg-black/80 dark:hover:bg-black rounded-full p-2 transition-all shadow-lg opacity-0 group-hover:opacity-100"
+aria-label="Previous slide"
+>
+<ChevronLeft className="w-6 h-6 text-slate-900 dark:text-white" />
+</button>
+
+<button
+onClick={nextSlide}
+className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white dark:bg-black/80 dark:hover:bg-black rounded-full p-2 transition-all shadow-lg opacity-0 group-hover:opacity-100"
+aria-label="Next slide"
+>
+<ChevronRight className="w-6 h-6 text-slate-900 dark:text-white" />
+</button>
+
+{/* Dot Indicators */}
+<div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+{carouselImages.map((_, index) => (
+<button
+key={index}
+onClick={() => setCarouselIndex(index)}
+className={`transition-all duration-300 rounded-full ${
+index === carouselIndex
+? "bg-white w-8 h-2"
+: "bg-white/50 w-2 h-2 hover:bg-white/70"
+}`}
+aria-label={`Go to slide ${index + 1}`}
+/>
+))}
+</div>
+
+{/* Info Section */}
 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-<h3 className="text-2xl font-bold mb-2">Modern Library Facilities</h3>
-<p className="text-white/90">Comprehensive resources for research and learning</p>
+<motion.div
+key={carouselIndex}
+initial={{ opacity: 0, y: 10 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5, delay: 0.2 }}
+>
+<h3 className="text-2xl font-bold mb-2">
+{carouselIndex === 0 && "Modern Library Learning Spaces"}
+{carouselIndex === 1 && "Student Research & Reading Area"}
+{carouselIndex === 2 && "Knowledge Resources & Facilities"}
+</h3>
+<p className="text-white/90 text-sm">
+{carouselIndex === 0 && "Inspiring learning environments designed for academic excellence"}
+{carouselIndex === 1 && "Dedicated spaces for focused study and research"}
+{carouselIndex === 2 && "Rich collection of resources supporting student success"}
+</p>
+</motion.div>
+</div>
 </div>
 </motion.div>
 
